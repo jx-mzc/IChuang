@@ -50,5 +50,25 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+//连接后台demo用例
+   bindtest: function () {
+    wx.request({
+      url: 'http://www.iwchuang.cn/weiDemo/demoServlet',
+      data: {
+        username: '001',
+        password: 'abc'
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+      },
+      fail: function (res) {
+        console.log(".....fail.....");
+      }
+    })
+  },
 })

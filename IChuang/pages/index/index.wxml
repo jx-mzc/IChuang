@@ -8,4 +8,8 @@
     <text class="user-motto">闵智超</text>
 
   </view>
+
+   <view>
+  <button bindtap='bindtest'>test</button>
+  </view>
 </view>
