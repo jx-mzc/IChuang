@@ -1,0 +1,4 @@
+<!--pages/shouye/shouye.wxml-->
+   <view>
+  <button bindtap='bindtest'>网络连接demo</button>
+  </view>
