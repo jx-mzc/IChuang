@@ -1,4 +1,4 @@
-// pages/proiect/project.js
+// pages/shouye/xinxi/bisaixinxi/bisaixinxi.js
 Page({
 
   /**

@@ -1,4 +1,4 @@
-// pages/student/student.js
+// pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi.js
 Page({
 
   /**

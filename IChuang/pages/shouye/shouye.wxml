@@ -1,4 +1,64 @@
-<!--pages/shouye/shouye.wxml-->
-   <view>
-  <button bindtap='bindtest'>网络连接demo</button>
+<!--轮播图-->
+<view class="haihao">
+  <swiper circular="true" indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' current='{{current}}' bindchange='swiperChange'>
+  <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="silde-image" style='width:100%' mode="aspectFill" bindtap='swiperClick'></image>
+      </swiper-item>  
+        </block>
+  </swiper>
+</view>
+<!--导航入口-->
+<view class="clear"></view>
+<view class='viewclass'>
+  <block wx:for="{{navs}}">
+  <view class="item" bindtap="navBtn" id="{{index}}">
+    <view> 
+    <image src="{{item.img}}" style="width:160rpx;height:160rpx"></image>
+    </view>
+    <view> {{item.name}}</view>
   </view>
+  </block>
+</view>
+  <!-- 滚动部分 -->
+ 
+  <view class='gundong-section'>
+    <image src="../images/round-g.gif"></image>
+    <view class="swiperview swiper-position">
+      <swiper class="swiperitem" indicator-dots="true" autoplay="{{autoplay}}" vertical="true" circular="true">
+        <block wx:for="{{rollData}}">
+          <swiper-item>
+            <text class="swiper-txt">{{item}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <!--底部链接-->
+
+<view class="clear"></view>
+<view class='show2'>
+    <view class="divLine"></view>
+      <view class="itemName">
+            <view> 活动1</view>
+        </view>
+
+      <view class="divLine"></view>
+
+      <view class="itemName">
+            <view>活动2</view>
+        </view>
+      <view class="divLine"></view>
+      <view class="itemName">
+            <view>活动3</view>
+        </view>
+
+      <view class="divLine"></view>
+
+      <view class="itemName">
+            <view>活动4</view>
+        </view>
+      <view class="divLine"></view>
+</view>
+<button bindtap='bindtest'>网络连接demo</button>

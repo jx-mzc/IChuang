@@ -1,18 +1,125 @@
-// pages/shouye/shouye.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2500,
+    duration: 800,
+    circular:true,
+    current:0,
+    imgUrls: [
+      "../images/haibao/haibao-1.jpg",
+      "../images/haibao/haibao-2.jpg",
+      "../images/haibao/haibao-3.jpg"
+    ],
+    navs:[]
   },
-
+/**
+ * 轮播图切换事件
+ */
+  swiperChange:function(e){
+    this.setData({
+      current:e.detail.current
+    })
+  },
+  /**
+   * 轮播图点击事件
+   */
+  swiperClick:function(e){
+    console.log(this.data.swiperCurrent);
+    let _this = this;
+    let _index = _this.data.current;
+    console.log(_index);
+    if (_index == "0") {
+      wx.navigateTo({
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+      })
+    }
+    if (_index == "1") {
+      wx.navigateTo({
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+      })
+    }
+    if (_index == "2") {
+      wx.navigateTo({
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var page = this;
+    var navs = this.loadNavData();
+    page.setData({ navs: navs });
+   
+    var that = this;
 
+    //获取当前位置经纬度
+    that.setData({
+      currentAddress: "上海",
+      loading: true
+    })
+
+    // 滚动数据配置
+    var rollData = [
+  
+      "小明成功申请项目A",
+      "小明成功申请项目B",
+      "小明成功申请项目C",
+      "小明成功申请项目D",
+    ];
+
+    that.setData({
+      rollData: rollData
+    })
+  },
+/**
+ * 中间导航框入口
+ */
+  navBtn: function (e) {
+    console.log(e);
+    var id = e.currentTarget.id;
+    if (id == "0") {
+      wx.navigateTo({
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+      })
+    }
+    if (id == "1") {
+      wx.navigateTo({
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+      })
+    }
+    if (id == "2") {
+      wx.navigateTo({
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+      })
+    }
+  },
+  loadNavData: function () {
+    var navs = [];
+
+    var nav0 = new Object();
+    nav0.img = '../images/haibao/haibao-1.jpg';
+    nav0.name= "社员信息";
+    navs[0] = nav0;
+
+    var nav1 = new Object();
+    nav1.img = '../images/haibao/haibao-1.jpg';
+    nav1.name = "活动信息";
+    navs[1] = nav1;
+
+    var nav2 = new Object();
+    nav2.img = '../images/haibao/haibao-1.jpg';
+    nav2.name = "比赛信息";
+    navs[2] = nav2;
+
+    return navs;
   },
 
   /**
@@ -62,10 +169,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },//连接后台demo用例
+  },
   bindtest: function () {
     wx.request({
-      url: 'http://www.iwchuang.cn/weiDemo/demoServlet',
+      // url: 'http://129.206.200.64/weiDemo/demoServlet',
+      url: 'http://129.204.200.64/weiDemo/demoServlet',
       data: {
         username: '001',
         password: 'abc'
@@ -81,5 +189,5 @@ Page({
         console.log(".....fail.....");
       }
     })
-  },
+  }
 })
