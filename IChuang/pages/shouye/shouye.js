@@ -16,7 +16,7 @@ Page({
       "../images/haibao/haibao-2.jpg",
       "../images/haibao/haibao-3.jpg"
     ],
-    navs:[]
+    navs:[],
   },
 /**
  * 轮播图切换事件
@@ -59,12 +59,6 @@ Page({
     page.setData({ navs: navs });
    
     var that = this;
-
-    //获取当前位置经纬度
-    that.setData({
-      currentAddress: "上海",
-      loading: true
-    })
 
     // 滚动数据配置
     var rollData = [
@@ -121,6 +115,7 @@ Page({
 
     return navs;
   },
+ 
   /**
    * 活动1跳转
    */
@@ -170,54 +165,6 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   bindtest: function () {
     wx.request({
       // url: 'http://129.206.200.64/weiDemo/demoServlet',
