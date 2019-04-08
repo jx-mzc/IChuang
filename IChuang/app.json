@@ -23,26 +23,26 @@
       {
         "pagePath": "pages/shouye/shouye",
         "text": "首页",
-        "iconPath": "pages/images/tab/headline-0.jpg",
-        "selectedIconPath": "pages/images/tab/headline-1.jpg"
+        "iconPath": "pages/images/tab/shouye-2.png",
+        "selectedIconPath": "pages/images/tab/shouye-1.png"
       },
       {
         "pagePath": "pages/study/study",
         "text": "学习",
-        "iconPath": "pages/images/tab/food-0.jpg",
-        "selectedIconPath": "pages/images/tab/food-0.jpg"
+        "iconPath": "pages/images/tab/xuexi-2.png",
+        "selectedIconPath": "pages/images/tab/xuexi-1.png"
       },
       {
         "pagePath": "pages/project/project",
         "text": "项目",
-        "iconPath": "pages/images/tab/message-0.jpg",
-        "selectedIconPath": "pages/images/tab/message-1.jpg"
+        "iconPath": "pages/images/tab/xiangmu-2.png",
+        "selectedIconPath": "pages/images/tab/xiangmu-1.png"
       },
       {
         "pagePath": "pages/me/me",
         "text": "我的",
-        "iconPath": "pages/images/tab/me-0.jpg",
-        "selectedIconPath": "pages/images/tab/me-1.jpg"
+        "iconPath": "pages/images/tab/me-2.png",
+        "selectedIconPath": "pages/images/tab/me-1.png"
       }
     ]
   }

@@ -23,19 +23,19 @@
 /*中间背景*/
 .viewclass{
   margin-left: 10rpx;
-  border-radius: 5rpx;
+  border-radius: 20rpx;
   margin-top: 40rpx;
   width: 97%;
-  height: 280rpx;
+  height: 140rpx;
   display: flex;
-  background: #EEEE00 ;
+  background:  #5CACEE  ;
   flex-direction: row;
 }
 
 .item{
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   text-align: center;
-  font-size: 40rpx;
+  font-size: 30rpx;
   width:1000rpx;
 }
 /* 滚动部分 */
@@ -60,6 +60,7 @@
 .gundong-section {
   position: relative;
   overflow: hidden;
+  margin-top: 20rpx;
   height: 80rpx;
   background-color: white;
   border-bottom: solid #f8f8f8 1px;
@@ -99,24 +100,34 @@
 /*展示部分*/
 .show{
   margin-top: 30rpx;
-  background: #EEEE00 ;
+  background: #5CACEE ;
   width: 97%;
-  height: 380rpx; 
-  border-radius: 10rpx;
+  height: 560rpx; 
+  border-radius: 20rpx;
   margin-left: 10rpx;
   flex-direction: row;
 }
-.divLine{
- background: #E0E3DA;
- width: 100%;
+.divLine2{
+ background: #5CACEE;
+ width: 80%;
  height: 1rpx;
- margin-top: 10rpx;
+ margin-top: 20rpx;
+}
+.divLine{
+ background: #5CACEE;
+ width: 90%;
+ height: 13rpx;
+ margin-left: 20rpx;
+ margin-top: 5rpx;
 }
 .itemName{
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
+    margin-left: 10rpx;
+    width: 97%;
     height: 70rpx;
+    border-radius: 20rpx;
     align-items: center;
 }
 .clear{
@@ -127,7 +138,7 @@
   background: #FCFCFC ;
   width: 94%;
   height: 380rpx; 
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   margin-left: 20rpx;
   flex-direction: row;
 }

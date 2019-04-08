@@ -14,7 +14,7 @@
   <block wx:for="{{navs}}">
   <view class="item" bindtap="navBtn" id="{{index}}">
     <view> 
-    <image src="{{item.img}}" style="width:160rpx;height:160rpx"></image>
+    <image src="{{item.img}}" style="width:60rpx;height:60rpx"></image>
     </view>
     <view> {{item.name}}</view>
   </view>
@@ -36,29 +36,44 @@
   </view>
 
   <!--底部链接-->
+ 
 
-<view class="clear"></view>
-<view class='show2'>
-    <view class="divLine"></view>
-      <view class="itemName">
-            <view> 活动1</view>
+<view class='show'>
+ <view class="divLine" ></view>
+    <view class="divLine2" ></view>
+      <view class="itemName" bindtap='btnAc1'>
+      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
+            <view > 活动1</view>
         </view>
 
       <view class="divLine"></view>
 
-      <view class="itemName">
-            <view>活动2</view>
+      <view class="itemName" bindtap='btnAc2'>
+      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
+            <view >活动2</view>
         </view>
       <view class="divLine"></view>
-      <view class="itemName">
-            <view>活动3</view>
+      <view class="itemName" bindtap='btnAc3'>
+      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
+            <view >活动3</view>
         </view>
 
       <view class="divLine"></view>
 
-      <view class="itemName">
-            <view>活动4</view>
+      <view class="itemName" bindtap='btnAc4'>
+      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
+            <view >活动4</view>
+        </view>
+      <view class="divLine"></view>
+      <view class="itemName" bindtap='btnAc5'>
+      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
+            <view >活动5</view>
+        </view>
+      <view class="divLine"></view>
+      <view class="itemName" bindtap='btnAc6'>
+      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
+            <view >活动6</view>
         </view>
       <view class="divLine"></view>
 </view>
-<button bindtap='bindtest'>网络连接demo</button>
+<!--<button bindtap='bindtest'>网络连接demo</button>

@@ -105,21 +105,69 @@ Page({
     var navs = [];
 
     var nav0 = new Object();
-    nav0.img = '../images/haibao/haibao-1.jpg';
-    nav0.name= "社员信息";
+    nav0.img = '../images/daohang/sheyuan.png';
+    nav0.name= "社员";
     navs[0] = nav0;
 
     var nav1 = new Object();
-    nav1.img = '../images/haibao/haibao-1.jpg';
-    nav1.name = "活动信息";
+    nav1.img = '../images/daohang/huodong.png';
+    nav1.name = "活动";
     navs[1] = nav1;
 
     var nav2 = new Object();
-    nav2.img = '../images/haibao/haibao-1.jpg';
-    nav2.name = "比赛信息";
+    nav2.img = '../images/daohang/bisai.png';
+    nav2.name = "比赛";
     navs[2] = nav2;
 
     return navs;
+  },
+  /**
+   * 活动1跳转
+   */
+  btnAc1:function(){
+    wx.navigateTo({
+      url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+    })
+  },
+  /**
+ * 活动2跳转
+ */
+  btnAc2: function () {
+    wx.navigateTo({
+      url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+    })
+  },
+  /**
+* 活动3跳转
+*/
+  btnAc3: function () {
+    wx.navigateTo({
+      url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+    })
+  },
+  /**
+* 活动4跳转
+*/
+  btnAc4: function () {
+    wx.navigateTo({
+      url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+    })
+  },
+  /**
+* 活动5跳转
+*/
+  btnAc5: function () {
+    wx.navigateTo({
+      url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+    })
+  },
+  /**
+* 活动6跳转
+*/
+  btnAc6: function () {
+    wx.navigateTo({
+      url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+    })
   },
 
   /**
