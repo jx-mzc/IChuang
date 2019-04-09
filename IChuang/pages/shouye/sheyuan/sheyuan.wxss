@@ -1,0 +1,93 @@
+/* pages/shouye/sheyuan/sheyuan.wxss */
+
+/* 表格代码   */
+.table{
+  border:1px solid #dadada;
+  border-right:2rpx;
+  border-left:2rpx;
+  border-bottom: 2rpx; 
+  width: 1500rpx;
+
+}
+/*横向排列*/
+.tr{
+  width:1500rpx;
+  display: flex;
+  justify-content: space-between;
+
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 2px solid #dadada;
+  border-right: 2px solid #dadada;
+  text-align: center;
+  width: 50%;
+}
+
+.th{
+  font-weight: 800;
+  font-size: 28rpx;
+  color: #330e0e;
+}
+.td{
+  font-size: 25rpx;
+  color: #ec9480;
+}
+
+
+/*表格大背景*/
+.bigviewclass{
+  margin-left: 10rpx;
+  border-radius: 20rpx;
+  width: 210%;
+  height: 460rpx;
+  background-color: #fff;
+  display: flex;
+}
+.topview{
+  font-size: 40rpx;
+  color: #330e0e;
+   margin-left: 10rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.boomview{
+  font-size: 30rpx;
+  color: #330e0e;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  margin-left: 10rpx;
+  background-color: #fff;
+}
+.viewclassleft{
+  margin-left: 10rpx;
+  margin-top: 40rpx;
+  width: 2rpx;
+  height: 500rpx;
+  background-color: #fff;
+  flex-direction: row;
+}
+
+
+.viewclassright{
+  margin-left: 0rpx;
+  margin-top: 40rpx;
+  width: 200%;
+  height: 500rpx;
+  background-color: #fff;
+  flex-direction: row;
+}
+
+.line{
+  display:grid;
+  height: 405rpx;
+  width: 2rpx;
+  background: #dadada;
+  color: #fff;
+}
+/*提交样式*/
+.btn{
+  margin-top: 50rpx;
+
+}

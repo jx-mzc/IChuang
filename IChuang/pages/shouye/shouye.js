@@ -76,12 +76,12 @@ Page({
 /**
  * 中间导航框入口
  */
-  navBtn: function (e) {
-    console.log(e);
-    var id = e.currentTarget.id;
+  navBtn: function (a) {
+    console.log(a);
+    var id = a.currentTarget.id;
     if (id == "0") {
       wx.navigateTo({
-        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+        url: '../../pages/shouye/sheyuan/sheyuan'
       })
     }
     if (id == "1") {
