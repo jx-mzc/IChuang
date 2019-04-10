@@ -6,7 +6,7 @@ Page({
   data: {
     inpuVal: "",//input框内值
     listarr: [],//创建数组
-    SearchText: '取消',//按钮变动值
+    SearchText: '搜索',//按钮值
     keydown_number: 0,//检测input框内是否有内容
     input_value: "",//value值
     name_focus: true//获取焦点
@@ -18,12 +18,11 @@ Page({
     })
     if (e.detail.cursor != 0) {
       this.setData({
-        SearchText: "搜索",
-        keydown_number: 1
+        keydown_number: 1, 
       })
+      
     } else {
       this.setData({
-        SearchText: "取消",
         keydown_number: 0
       })
     }
@@ -37,6 +36,14 @@ Page({
       var i = this.data.input_value;
       console.log(this.data.inputVal)
       console.log(i)
+      console.log(this.data.inputVal);
+       let name = this.data.inputVal
+        wx.navigateTo({
+        url: '../sheyuanitem/sheyuanitem?json=' + JSON.stringify(name),
+        })
+      this.data.inputVal = "";
+      this.data.keydown_number=0;
+      console.log(this.data.inputVal)
       //根据姓名i进行迷糊查找
 
 
@@ -52,7 +59,7 @@ Page({
           // 删除已存在后重新插入至数组
           arr.splice(arrnum, 1)
           arr.unshift(this.data.inputVal);
-
+     
         } else {
           arr.unshift(this.data.inputVal);
         }
@@ -67,9 +74,9 @@ Page({
         } else {
           arr.unshift(this.data.input_value);
         }
-
+    
       }
-      console.log(arr)
+      // console.log(arr)
 
       //存储搜索记录
       wx.setStorage({
@@ -88,9 +95,10 @@ Page({
         }
       })
       this.setData({
-        input_value: '',
+        input_value:'',
       })
     } else {
+      
       console.log("取消")
     }
 
@@ -98,6 +106,7 @@ Page({
   //清除搜索记录
   delete_list: function () {
     //清除当前数据
+    this.data.inputVal=""
     this.setData({
       listarr: []
     });
@@ -112,6 +121,7 @@ Page({
       name_focus: true
     })
     let value = e.currentTarget.dataset.text;
+    this.data.inputVal=value
     this.setData({
       input_value: value,
       SearchText: "搜索",

@@ -1,6 +1,6 @@
 {
   "pages": [
-  
+    
     "pages/shouye/shouye",
     "pages/study/study",
     "pages/project/project",
@@ -9,7 +9,7 @@
     "pages/me/kongxian/kongxian",
     "pages/shouye/xinxi/sheyuanxinxiSou/sheyaunxinxiSou",
     "pages/shouye/xinxi/sheyuanitem/sheyuanitem",
-    "pages/shouye/xinxi/sheyuanxinxi/sheyuanxixni"
+   "pages/shouye/xinxi/sheyuanxinxi/sheyuanxixni"
   ],
   "window": {
     "backgroundTextStyle": "light",

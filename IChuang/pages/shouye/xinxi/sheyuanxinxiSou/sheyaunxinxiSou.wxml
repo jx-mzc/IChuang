@@ -1,7 +1,7 @@
 <view class="SearchBox">
   <view class="Search_input_top_box">
     <view class="Search_ico_box">
-      <image class="Search_ico" src='../images/tab/qingkong.png'></image>
+      <image class="Search_ico" src='../images/tab/soushuo.png'></image>
     </view>
     <input class="Search_Input" focus="{{name_focus}}" placeholder='请输入社员姓名' bindinput='inputvalue' value="{{input_value}}"></input>
     <view class="Search_btn" bindtap='search'>{{SearchText}}</view>

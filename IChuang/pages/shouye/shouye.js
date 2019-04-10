@@ -41,7 +41,7 @@ Page({
     }
     if (_index == "1") {
       wx.navigateTo({
-        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+        url: '../../pages/shouye/xinxi/huodongxinxi/huodongxinxi'
       })
     }
     if (_index == "2") {
@@ -86,7 +86,7 @@ Page({
     }
     if (id == "1") {
       wx.navigateTo({
-        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+        url: '../../pages/shouye/xinxi/huodongxinxi/huodongxinxi'
       })
     }
     if (id == "2") {

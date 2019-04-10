@@ -38,7 +38,7 @@ Page({
     var name = that.data.person[id].index;
     console.log(name);
     wx.navigateTo({
-      url: '../sheyuanitem/sheyuanitem?json=' + JSON.stringify(name)
+      url: '../sheyuanitem/sheyuanitem?json=' + JSON.stringify(name),
     })  
   }
 })
