@@ -79,3 +79,16 @@
       <view class="divLine"></view>
 </view> 
 <!--<button bindtap='bindtest'>网络连接demo</button>
+
+<view wx:for="{{6}}">
+    <view class="wx-item">nihao</view>
+</view>
+.wx-item{
+  border: 2rpx;
+  background-color: #FF0000;
+  margin-top: 30rpx;
+  width: 97%;
+  height: 50rpx; 
+  border-radius: 20rpx;
+  margin-left: 10rpx;
+}

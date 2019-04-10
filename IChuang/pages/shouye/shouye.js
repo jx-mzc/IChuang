@@ -81,7 +81,7 @@ Page({
     var id = a.currentTarget.id;
     if (id == "0") {
       wx.navigateTo({
-        url: '../../pages/shouye/sheyuan/sheyuan'
+        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyuanxixni'
       })
     }
     if (id == "1") {

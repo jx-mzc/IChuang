@@ -1,0 +1,17 @@
+/* pages/shouye/xinxi/sheyuanxinxi/sheyuanxixni.wxss */
+.items{
+    margin-left: 20rpx;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  width: 95%;
+  height: 50rpx;
+  display: flex;
+ background-color: #fff;
+  flex-direction: row;
+}
+.textl{
+  margin-left: 30rpx;
+}
+.textr{
+  margin-left: 250rpx;
+}

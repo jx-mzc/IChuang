@@ -1,0 +1,23 @@
+<view class="SearchBox">
+  <view class="Search_input_top_box">
+    <view class="Search_ico_box">
+      <image class="Search_ico" src='../images/tab/qingkong.png'></image>
+    </view>
+    <input class="Search_Input" focus="{{name_focus}}" placeholder='请输入社员姓名' bindinput='inputvalue' value="{{input_value}}"></input>
+    <view class="Search_btn" bindtap='search'>{{SearchText}}</view>
+  </view>
+  <view class="Search_xian"></view>
+  <!--搜索记录盒子-->
+  <view class="Search_record_box">
+    <view class="Search_record_text">
+      <text>搜索记录</text>
+      <image bindtap='delete_list' src='../images/tab/qingkong.png'>删除</image> 
+    </view>
+    <!--记录词的盒子-->
+    <view class="History_box">
+      <view class="History-list">
+        <text wx:for="{{listarr}}" data-text="{{item}}" wx:key="key" bindtap='this_value'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>
