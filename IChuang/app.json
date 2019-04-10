@@ -1,14 +1,14 @@
 {
   "pages": [
-   
-    "pages/shouye/shouye",
+    "pages/me/me",
     "pages/study/study",
     "pages/project/project",
-    "pages/me/me",
+    "pages/shouye/shouye",
     "pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi",
     "pages/shouye/xinxi/huodongxinxi/huodongxinxi",
     "pages/shouye/xinxi/bisaixinxi/bisaixinxi",
-    "pages/shouye/sheyuan/sheyuan"
+    "pages/shouye/sheyuan/sheyuan",
+    "pages/me/appraisal/appraisal"
   ],
   "window": {
     "backgroundTextStyle": "light",
