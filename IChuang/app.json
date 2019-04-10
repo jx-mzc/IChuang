@@ -1,0 +1,52 @@
+{
+  "pages": [
+  
+    "pages/shouye/shouye",
+    "pages/study/study",
+    "pages/project/project",
+    "pages/me/me",
+    "pages/shouye/xinxi/huodongxinxi/huodongxinxi",
+    "pages/me/kongxian/kongxian",
+    "pages/shouye/xinxi/sheyuanxinxiSou/sheyaunxinxiSou",
+    "pages/shouye/xinxi/sheyuanitem/sheyuanitem",
+    "pages/shouye/xinxi/sheyuanxinxi/sheyuanxixni"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "ichuang",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
+    "selectedColor": "#CC1004",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/shouye/shouye",
+        "text": "首页",
+        "iconPath": "pages/images/tab/shouye-2.png",
+        "selectedIconPath": "pages/images/tab/shouye-1.png"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "text": "学习",
+        "iconPath": "pages/images/tab/xuexi-2.png",
+        "selectedIconPath": "pages/images/tab/xuexi-1.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "pages/images/tab/xiangmu-2.png",
+        "selectedIconPath": "pages/images/tab/xiangmu-1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/images/tab/me-2.png",
+        "selectedIconPath": "pages/images/tab/me-1.png"
+      }
+    ]
+  }
+}
