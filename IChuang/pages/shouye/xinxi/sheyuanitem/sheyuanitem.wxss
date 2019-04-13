@@ -24,6 +24,7 @@
 }
 
 .boom{
+
  background-color:#FFFFFF;
   width: 97%;
   margin-top: 10rpx;

@@ -12,9 +12,9 @@ Page({
     circular:true,
     current:0,
     imgUrls: [
-      "../images/haibao/haibao-1.jpg",
-      "../images/haibao/haibao-2.jpg",
-      "../images/haibao/haibao-3.jpg"
+      "http://129.204.200.64/123/images/haibao/haibao-1.jpg",
+      "http://129.204.200.64/123/images/haibao/haibao-2.jpg",
+      "http://129.204.200.64/123/images/haibao/haibao-3.jpg"
     ],
     navs:[],
   },
@@ -91,7 +91,7 @@ Page({
     }
     if (id == "2") {
       wx.navigateTo({
-        url: '../../pages/shouye/xinxi/sheyuanxinxi/sheyaunxinxi'
+        url: '../../pages/shouye/xinxi/bisaixinxi/bisaixinxi'
       })
     }
   },
@@ -99,17 +99,17 @@ Page({
     var navs = [];
 
     var nav0 = new Object();
-    nav0.img = '../images/daohang/sheyuan.png';
+    nav0.img = 'http://129.204.200.64/123/images/daohang/sheyuan.png';
     nav0.name= "社员";
     navs[0] = nav0;
 
     var nav1 = new Object();
-    nav1.img = '../images/daohang/huodong.png';
+    nav1.img = 'http://129.204.200.64/123/images/daohang/huodong.png';
     nav1.name = "活动";
     navs[1] = nav1;
 
     var nav2 = new Object();
-    nav2.img = '../images/daohang/bisai.png';
+    nav2.img = 'http://129.204.200.64/123/images/daohang/bisai.png';
     nav2.name = "比赛";
     navs[2] = nav2;
 

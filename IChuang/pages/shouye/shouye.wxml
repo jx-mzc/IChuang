@@ -23,7 +23,7 @@
 <!-- 滚动部分 -->
 
 <view class='gundong-section'>
-  <image src="../images/round-g.gif"></image>
+  <image src="http://129.204.200.64/123/images/round-g.gif"></image>
   <view class="swiperview swiper-position">
     <swiper class="swiperitem" indicator-dots="true" autoplay="{{autoplay}}" vertical="true" circular="true">
       <block wx:for="{{rollData}}">
