@@ -1,0 +1,18 @@
+<!--pages/me/points/points.wxml-->
+<view class="pages">
+  <view class="page__bd">
+    <view class='points_points'>
+      131
+    </view>
+    <view class='points_'>
+      <navigator url="">
+        积分详情
+      </navigator>
+    </view>
+    <view class='points_'>
+      <navigator url="" >
+      积分排行
+      </navigator>
+    </view>
+  </view>
+</view>
