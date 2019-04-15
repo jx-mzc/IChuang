@@ -1,23 +1,40 @@
-<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="default">default</button>
-<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="primary">primary</button>
-<button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="warn">default</button>
-<button bindtap="setDisable">点击设置以上按钮disable属性</button>
-<button bindtap="setPlain">点击设置以上按钮plain属性</button>
-<button bindtap="setLoading">点击设置以上按钮loading属性</button>
+ <video class="videobackground" id="myVideo" src="{{thissrc}}" binderror="videoErrorCallback"   controls objectFit='controls'></video> 
+ <view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block  wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="teacherba" hidden="{{activeIndex != 0}}">
+                  <view class='teacherba1'>
+                    <view class='imageba'></view>
+                    <view class='teacherbar'>
+                       <view style=' margin-top: 20rpx; margin-left: 20rpx'>{{teachername}}</view>
+                       <view style=' margin-top: 20rpx; margin-left: 20rpx'>{{id}}</view>
+                    </view> 
+                  </view>
+                 <text class='jianjie'>{{intro}}</text>
+                </view>
+                 
+                <view class="" hidden="{{activeIndex != 1}}">
+                  <view style='margin-top: 20rpx;'></view>
+                  <view style='height:3rpx;background: #CFCFCF '></view>
+                  <block wx:for="{{courses}}" data-item='item'>
+                    <view  bindtap='choose' id="{{index}}" hover-class='btn_color'>
+                      <view style='padding-top: 20rpx;height: 60rpx;'><text style='margin-left:30rpx'>{{item.classname}}</text></view>
+                      <view style='height:3rpx;background: #CFCFCF '></view>
+                    </view>
+                  </block> 
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
 
-<checkbox-group bindchange="checkboxChange">
-  <checkbox value="USA">美国</checkbox>
-  <checkbox value="CHN">中国</checkbox>
-  <checkbox value="JPA">日本</checkbox>
-  <checkbox value="ENG">英国</checkbox>
-</checkbox-group>
-
-<radio-group class="radio-group" bindchange="radioChange">
-  <radio value="USA">美国</radio>
-  <radio value="CHN">中国</radio>
-  <radio value="JPA">日本</radio>
-  <radio value="ENG">英国</radio>
-</radio-group>
+  

@@ -1,0 +1,29 @@
+
+<view class="photo">
+  <text class="font">{{name}}</text> 
+</view> 
+<view class="boom">
+  <text class="font">活动报名时间</text>
+  <text class="textr">2016.10.20-2016.12.00</text>
+</view>
+<view class="boom">
+  <text class="font">活动开始时间</text>
+  <text class="textr">2017.10.10</text>
+</view>
+<view class="boom">
+  <text class="font">活动结束时间</text>
+  <text class="textr">2017.10.10</text>
+</view>
+<view class="boom">
+  <text class="font">活动发布方</text>
+  <text class="textr">2019级</text>
+</view>
+<view class="boom">
+  <text class="font">活动举办方</text>
+  <text class="textr">软件学院</text>
+</view>
+
+<view class="photoboom">
+  <view class = "textboom" bindtap='showfile'>查看活动文档</view>
+  <view class = "textboom">报名</view>
+</view>

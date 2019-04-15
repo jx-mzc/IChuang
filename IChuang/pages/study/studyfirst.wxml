@@ -1,0 +1,9 @@
+<view wx:for="{{course}}" data-item='item'>
+  <view class="viewclass" bindtap='navBtn' id="{{index}}">
+    <image class="imgclass" src="{{item.src}}" />
+    <view class="textclass">
+      <text class="fontTop">{{item.name}}</text>
+      <view class="fontBom">{{item.teacher}}</view>
+    </view>
+  </view>
+</view>
