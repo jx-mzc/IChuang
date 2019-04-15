@@ -1,17 +1,19 @@
 {
   "pages": [
+     
     "pages/shouye/shouye",
     "pages/study/study",
     "pages/project/project",
     "pages/me/me",
     "pages/me/kongxian/kongxian",
-    "pages/shouye/xinxi/sheyuanxinxiSou/sheyaunxinxiSou",
+    "pages/study/studyfirst",
     "pages/shouye/xinxi/sheyuanitem/sheyuanitem",
     "pages/shouye/xinxi/sheyuanxinxi/sheyuanxixni",
     "pages/shouye/xinxi/huodongxinxi/huodongxinxi",
     "pages/shouye/xinxi/huodongxinxiitem/huodongxinxiitem",
     "pages/shouye/xinxi/bisaixinxi/bisaixinxi",
     "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +34,7 @@
         "selectedIconPath": "pages/images/tab/shouye-1.png"
       },
       {
-        "pagePath": "pages/study/study",
+        "pagePath": "pages/study/studyfirst",
         "text": "学习",
         "iconPath": "pages/images/tab/xuexi-2.png",
         "selectedIconPath": "pages/images/tab/xuexi-1.png"

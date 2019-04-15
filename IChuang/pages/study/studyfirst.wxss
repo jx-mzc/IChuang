@@ -1,0 +1,45 @@
+
+.viewclass{
+  margin-left: 10rpx;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+  width: 97%;
+  height: 240rpx;
+  display: flex;
+ background-color: #fff;
+  flex-direction: row;
+}
+.imgclass{
+  border-radius: 20rpx;
+  width: 48%;
+  height: 240rpx;
+  display: flex;
+  flex-direction: row;
+}
+.textclass{
+  border-radius: 20rpx;
+  margin-left: 10rpx;
+  width: 50%;
+  height: 240rpx;
+  background-color:  #fff;
+  flex-direction: row;
+}
+.fontTop{
+  font-size: 50rpx;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  display: -webkit-box;  /*设置为弹性盒子*/
+  -webkit-line-clamp: 1;  /*最多显示5行*/
+  overflow: hidden;  /*超出隐藏*/
+  text-overflow: ellipsis;  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;  /*强制英文单词自动换行*/
+
+}
+.fontBom{
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  word-break: break-all; /* 追加这一行代码 */
+
+}

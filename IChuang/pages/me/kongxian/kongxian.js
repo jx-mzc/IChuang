@@ -42,7 +42,11 @@ Page({
       ],
   
   },
- 
+ onLoad:function(){
+   wx.setNavigationBarTitle({
+     title: '空闲时间登记',
+   })
+ },
 /**
  * 点击状态栏
  */
