@@ -4,8 +4,8 @@
   <block wx:if='{{isLogin}}'>
     <image id='myIcon' src='{{src}}'></image>
     <text id='nickName'>{{nickName}}</text>
-    </block>
-    <button wx:else open-type='getUserInfo' bindgetuserinfo='getMyInfo'>未登录，点此登录</button>
+  </block>
+  <button wx:else open-type='getUserInfo' bindgetuserinfo='getMyInfo'>未登录，点此登录</button>
 </view>
 
 <view class="weui-panel">
@@ -20,8 +20,11 @@
             <view>我的考核</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
         </view>
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        
+        <navigator url="points/points" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
           <view class="weui-cell__hd">
             <image src="../images/icon/integration.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>

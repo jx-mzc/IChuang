@@ -1,4 +1,6 @@
 /* pages/me/appraisal/appraisal.wxss */
+/*<<<<<<< HEAD
+=======*/
 page{  
   background-color: blue;  
   width:100%;  
@@ -35,3 +37,4 @@ page{
   font-size: 13px;
   text-align: center;
 }
+/*>>>>>>> b5049ea4ac54d47ad764385de29472783e4d5389*/
