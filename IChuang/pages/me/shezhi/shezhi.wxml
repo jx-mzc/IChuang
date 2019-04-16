@@ -1,15 +1,7 @@
-<!--pages/me/me.wxml-->
-
-<view id='myLogin'>
-  <block wx:if='{{isLogin}}'>
-    <image id='myIcon' src='{{src}}'></image>
-    <text id='nickName'>{{nickName}}</text>
-    </block>
-    <button wx:else open-type='getUserInfo' bindgetuserinfo='getMyInfo'>未登录，点此登录</button>
-</view>
+<!--pages/me/shezhi/shezhi.wxml-->
 
 <view class="weui-panel">
-  <view class="weui-panel__bd">
+ <view class="weui-panel__bd">
     <view class="weui-media-box weui-media-box_small-appmsg">
       <view class="weui-cells weui-cells_in-small-appmsg">
         <navigator url="appraisal/appraisal" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
@@ -17,7 +9,7 @@
             <image src="../images/icon/appraisal.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>我的考核</view>
+            <view>111</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
@@ -26,7 +18,7 @@
             <image src="../images/icon/integration.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>我的积分</view>
+            <view>22222222</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
@@ -35,7 +27,7 @@
             <image src="../images/icon/tickling.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>反馈</view>
+            <view>3333333</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
@@ -44,7 +36,7 @@
             <image src="../images/icon/Settings.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>设置</view>
+            <view>44444</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
@@ -53,7 +45,7 @@
             <image src="../images/icon/leisure.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>空闲时间表</view>
+            <view>55555</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
