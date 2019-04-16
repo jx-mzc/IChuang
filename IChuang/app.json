@@ -1,6 +1,5 @@
 {
   "pages": [
-     
     "pages/shouye/shouye",
     "pages/study/study",
     "pages/project/project",
@@ -12,8 +11,11 @@
     "pages/shouye/xinxi/huodongxinxi/huodongxinxi",
     "pages/shouye/xinxi/huodongxinxiitem/huodongxinxiitem",
     "pages/shouye/xinxi/bisaixinxi/bisaixinxi",
-    "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem"
-  
+    "pages/me/appraisal/getresult/getresult",
+    "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem",
+    "pages/study/taolun/taolun",
+    "pages/study/lianxi/lianxi",
+    "pages/study/lianxi/lianxiresult/lianxiresult"
   ],
   "window": {
     "backgroundTextStyle": "light",

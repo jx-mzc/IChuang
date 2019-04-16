@@ -1,0 +1,41 @@
+/* pages/me/appraisal/getresult/getresult.wxss */
+
+.showback {
+  margin-left: 20rpx;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-top: 40rpx;
+  width: 95%;
+  height: 100rpx;
+  display: flex;
+  background-color: #fff;
+  line-height: 50rpx;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.font {
+  font-size: 50rpx;
+}
+
+.showgrade {
+  margin-left: 20rpx;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 95%;
+  height: 200rpx;
+  background-color: #fff;
+  line-height: 200rpx;
+  flex: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.fontgrade {
+  font-size: 150rpx;
+  color: red;
+}

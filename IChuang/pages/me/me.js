@@ -11,5 +11,10 @@ Page({
       sec:info.avatarUrl,  //更新图片来源
       nickName:info.nickName  //更新昵称
     })
+  },
+  goto:function(){
+    wx.navigateTo({
+      url: 'appraisal/appraisal?id=1',
+    })
   }
 })
