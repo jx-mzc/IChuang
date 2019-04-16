@@ -7,3 +7,6 @@
     </view>
   </view>
 </view>
+<view bindtap='adddetial'>
+  <image class="add_icon" src="../images/tab/taolun.png"></image>
+</view>

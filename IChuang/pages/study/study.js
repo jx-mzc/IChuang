@@ -51,5 +51,15 @@ Page({
       thissrc: this.data.courses[id].src,
     })
     console.log(this.data.thissrc);
-  }
+  },
+ lianxi:function(e){
+   console.log(e)
+   var id = e.currentTarget.id;
+   console.log(id)
+   var name = this.data.courses[id].classname;
+   console.log(name)
+   wx.navigateTo({
+     url: 'lianxi/lianxi?classname=' + JSON.stringify(name),
+   })
+ }
 });

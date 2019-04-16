@@ -1,0 +1,29 @@
+<view style='margin-top:20rpx'>
+  <view class="showback">
+    <view class="font">你的考核成绩</view>
+  </view>
+  <view class="showgrade">
+    <text class="fontgrade">{{grade}}</text>
+  </view>
+</view>
+<view style='margin-top:20rpx'>
+  <view class="showback">
+    <view class="font">你的答案</view>
+  </view>
+  <view class="showgrade" >
+  <block wx:for="{{choose}}" >
+    <text style='margin-left:20rpx'>{{item}}</text>
+    </block>
+  </view>
+</view>
+<view style='margin-top:20rpx'>
+  <view class="showback">
+    <view class="font">标准答案</view>
+  </view>
+   <view class="showgrade" >
+  <block wx:for="{{finalanswer}}">
+    <text style='margin-left:20rpx'>{{item}}</text>
+    </block>
+  </view>
+
+</view>
