@@ -1,0 +1,59 @@
+page{ 
+ height: 100%; 
+}   
+/*登录图片*/
+.login-icon{ 
+ flex: none; 
+} 
+.login-img{ 
+ width: 750rpx; 
+} 
+.line { 
+ margin-left: 20rpx;
+  width: 95%;
+ height: 1rpx; 
+ background-color: #cccccc; 
+ margin-top: 1rpx; 
+} 
+/*按钮*/
+.loginBtnView { 
+ width: 100%; 
+ height: auto; 
+ margin-top: 0rpx; 
+ margin-bottom: 0rpx; 
+ padding-bottom: 0rpx; 
+}   
+.loginBtn { 
+ width: 80%; 
+ margin-top: 35rpx; 
+}
+/*账号密码不为空*/
+.fontstyle{
+ font-size: 30rpx;
+  color: red;
+}
+/*背景*/
+.inputView{
+  background-color: #FFFFFF;
+  height: 80rpx;
+margin-left: 20rpx;
+  width: 95%;
+ display: flex;
+ flex-direction: row;
+ line-height: 30rpx;
+}
+.Image{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.loginLab{
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  width: 20%
+}
+.inputText{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+} 

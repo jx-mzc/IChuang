@@ -1,11 +1,14 @@
 <!--pages/me/me.wxml-->
 
-<view id='myLogin'>
-  <block wx:if='{{isLogin}}'>
-    <image id='myIcon' src='{{src}}'></image>
-    <text id='nickName'>{{nickName}}</text>
-  </block>
-  <button wx:else open-type='getUserInfo' bindgetuserinfo='getMyInfo'>未登录，点此登录</button>
+<view class='myLogin' bindtap='person'>
+
+  <image class='image' src='{{photo}}'></image>
+  <view class="image2">
+    <view class='font'>{{name}}</view> 
+    <view class='font1'>{{account}}</view> 
+  </view>
+
+<view class='next' ></view>
 </view>
 
 <view class="weui-panel">

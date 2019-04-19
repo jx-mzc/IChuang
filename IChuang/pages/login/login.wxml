@@ -1,0 +1,28 @@
+<view class="login-icon">
+  <image class="login-img" src="../images/haibao/haibao-1.jpg"></image>
+</view>
+
+
+<!-- 账号-->
+<view class="inputView">
+   <image class="Image" src="../images/zhanghao.png"></image>
+  <label class="loginLab">账号：</label>
+<input class="inputText" placeholder="请输入账号" bindinput="phoneInput" />
+</view>
+<view class="line"></view>
+
+<!--密码-->
+<view class="inputView">
+  <image class="Image" src="../images/mima.png"></image>
+  <label class="loginLab">密码</label>
+  <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" />
+</view> 
+<!--账号，密码为空提示-->
+<view style='height:40rpx; display: flex;flex-direction: column;justify-content: center;align-items: center;'>
+  <text class="fontstyle">{{tishi}}</text>
+</view>
+<!--按钮-->
+<view class="loginBtnView">
+  <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
+
+</view>

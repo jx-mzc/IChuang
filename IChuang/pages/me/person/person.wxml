@@ -1,0 +1,5 @@
+<view class='myLogin'>
+  <view class='font'>头像</view>
+  <view class='image'></view>
+</view>
+<view class='line'></view>
