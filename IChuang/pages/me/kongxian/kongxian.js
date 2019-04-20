@@ -1,6 +1,5 @@
 // pages/shouye/sheyuan/sheyuan.js
 Page({
- 
   /**
    * 页面的初始数据
    */

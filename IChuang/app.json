@@ -1,10 +1,19 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/me/feedback/feedback",
     "pages/project/project",
     "pages/shouye/shouye",
     "pages/study/study",
     "pages/me/me",
+=======
+   
+    "pages/login/login",
+    "pages/shouye/shouye",
+    "pages/study/study",
+    "pages/project/project",
+     "pages/me/me",
+>>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
     "pages/me/kongxian/kongxian",
     "pages/study/studyfirst",
     "pages/shouye/xinxi/sheyuanitem/sheyuanitem",
@@ -12,9 +21,19 @@
     "pages/shouye/xinxi/huodongxinxi/huodongxinxi",
     "pages/shouye/xinxi/huodongxinxiitem/huodongxinxiitem",
     "pages/shouye/xinxi/bisaixinxi/bisaixinxi",
+<<<<<<< HEAD
     "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem",
     "pages/project/projectDetails/projectDetails",
     "pages/me/install/install"
+=======
+    "pages/me/appraisal/getresult/getresult",
+    "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem",
+    "pages/study/taolun/taolun",
+    "pages/study/lianxi/lianxi",
+    "pages/me/person/person",
+    "pages/study/lianxi/lianxiresult/lianxiresult"
+    
+>>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
   ],
   "window": {
     "backgroundTextStyle": "light",

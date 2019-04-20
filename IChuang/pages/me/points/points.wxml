@@ -1,0 +1,29 @@
+<!--pages/me/points/points.wxml-->
+
+<view class="pages">
+  <view class="page__bd">
+    <view class='points_points' style=" background:url('');">
+      131
+    </view>
+    <view class="weui-cells weui-cells_in-small-appmsg">
+      <navigator url="PointsDetils/PointsDetils" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="../../images/icon/icon-details.png" style="width: 20px;height: 20px;margin-right: 5px" />
+        </view>
+        <view class="weui-cell__bd weui-cell_primary">
+          <view>积分详情</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="PointsRank/PointsRank" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="../../images/icon/icon-rank.png" style="width: 20px;height: 20px;margin-right: 5px" />
+        </view>
+        <view class="weui-cell__bd weui-cell_primary">
+          <view>积分排名</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

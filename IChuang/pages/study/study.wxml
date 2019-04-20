@@ -1,40 +1,66 @@
- <video class="videobackground" id="myVideo" src="{{thissrc}}" binderror="videoErrorCallback"   controls objectFit='controls'></video> 
- <view class="page">
-    <view class="page__bd">
-        <view class="weui-tab">
-            <view class="weui-navbar">
-                <block  wx:for="{{tabs}}" wx:key="*this">
-                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-                        <view class="weui-navbar__title">{{item}}</view>
-                    </view>
-                </block>
-                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+<video class="videobackground" bindtap='show' id="myVideo" src="{{thissrc}}" b binderror="videoErrorCallback" autoplay='false' controls objectFit='controls'>
+<!-- <cover-view >
+  <image style='width:100%;height: 550rpx;'src='//vodplayerinfo-10005041.file.myqcloud.com/3035579109/vod_paster_pause/paster_pause1469013308.jpg'></image> 
+</cover-view>-->
+</video>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="teacherba" hidden="{{activeIndex != 0}}">
+          <view class='teacherba1'>
+            <view class='imageba'></view>
+            <view class='teacherbar'>
+              <view style=' margin-top: 20rpx; margin-left: 20rpx'>{{teachername}}</view>
+              <view style=' margin-top: 20rpx; margin-left: 20rpx'>{{id}}</view>
             </view>
-            <view class="weui-tab__panel">
-                <view class="teacherba" hidden="{{activeIndex != 0}}">
-                  <view class='teacherba1'>
-                    <view class='imageba'></view>
-                    <view class='teacherbar'>
-                       <view style=' margin-top: 20rpx; margin-left: 20rpx'>{{teachername}}</view>
-                       <view style=' margin-top: 20rpx; margin-left: 20rpx'>{{id}}</view>
-                    </view> 
-                  </view>
-                 <text class='jianjie'>{{intro}}</text>
-                </view>
-                 
-                <view class="" hidden="{{activeIndex != 1}}">
-                  <view style='margin-top: 20rpx;'></view>
-                  <view style='height:3rpx;background: #CFCFCF '></view>
-                  <block wx:for="{{courses}}" data-item='item'>
-                    <view  bindtap='choose' id="{{index}}" hover-class='btn_color'>
-                      <view style='padding-top: 20rpx;height: 60rpx;'><text style='margin-left:30rpx'>{{item.classname}}</text></view>
-                      <view style='height:3rpx;background: #CFCFCF '></view>
-                    </view>
-                  </block> 
-                </view>
-            </view>
+          </view>
+          <text class='jianjie'>{{intro}}</text>
         </view>
-    </view>
-</view>
 
-  
+        <view class="" hidden="{{activeIndex != 1}}">
+
+          <view class='flex'>
+            <view class="backl">
+
+              <view style='height:3rpx;background: #CFCFCF '></view>
+              <!--点击切换视频-->
+              <block wx:for="{{courses}}" data-item='item'>
+                <view bindtap='choose' id="{{index}}" hover-class='btn_color' style='width:100%'>
+                  <view style='padding-top: 20rpx;height: 60rpx;'>
+                    <text class='font'>{{item.classname}}</text>
+                  </view>
+                  <view style='height:3rpx;background: #CFCFCF '></view>
+                </view>
+                <view style='background-color: #FF6347'></view>
+              </block>
+
+            </view>
+            <view class="backr">
+
+              <view style='height:3rpx;background: #CFCFCF '></view>
+
+              <block wx:for="{{courses}}" data-item='item'>
+                <view bindtap='lianxi' id="{{index}}" style='width:100%'>
+                  <view style='padding-top: 20rpx;height: 60rpx;'>
+                    <text class='font'>练习</text>
+                  </view>
+                  <view style='height:3rpx;background: #CFCFCF '></view>
+                </view>
+                <view style='background-color: #FF6347'></view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

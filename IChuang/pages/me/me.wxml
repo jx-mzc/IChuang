@@ -1,18 +1,21 @@
 <!--pages/me/me.wxml-->
 
-<view id='myLogin'>
-  <block wx:if='{{isLogin}}'>
-    <image id='myIcon' src='{{src}}'></image>
-    <text id='nickName'>{{nickName}}</text>
-    </block>
-    <button wx:else open-type='getUserInfo' bindgetuserinfo='getMyInfo'>未登录，点此登录</button>
+<view class='myLogin' bindtap='person'>
+
+  <image class='image' src='{{photo}}'></image>
+  <view class="image2">
+    <view class='font'>{{name}}</view> 
+    <view class='font1'>{{account}}</view> 
+  </view>
+
+<view class='next' ></view>
 </view>
 
 <view class="weui-panel">
   <view class="weui-panel__bd">
     <view class="weui-media-box weui-media-box_small-appmsg">
       <view class="weui-cells weui-cells_in-small-appmsg">
-        <navigator url="appraisal/appraisal" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view bindtap='goto' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <view class="weui-cell__hd">
             <image src="../images/icon/appraisal.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
@@ -20,8 +23,11 @@
             <view>我的考核</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-        </navigator>
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+        </view>
+        
+        <navigator url="points/points" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
           <view class="weui-cell__hd">
             <image src="../images/icon/integration.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
@@ -30,7 +36,7 @@
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="fankui/fankui" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
           <view class="weui-cell__hd">
             <image src="../images/icon/tickling.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>
@@ -39,7 +45,11 @@
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
+<<<<<<< HEAD
         <navigator url="install/install" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+=======
+        <navigator url="shezhi/shezhi" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+>>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
           <view class="weui-cell__hd">
             <image src="../images/icon/Settings.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>

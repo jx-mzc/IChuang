@@ -1,0 +1,64 @@
+/* pages/me/person/person.wxss */
+.myLogin {
+  background-color: #FFFFFF;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.font{
+  margin-top: 100rpx;
+  margin-left: 40rpx;
+  width: 280rpx
+}
+.image{
+   background-color: rgb(196, 36, 36);
+   margin-top: 60rpx;
+   margin-left: 140rpx;
+    height: 160rpx;
+   width: 140rpx;
+    border-radius: 20rpx;  
+}
+.next{
+   margin-top: 100rpx;
+   margin-left: 80rpx;
+    height: 60rpx;
+   width: 60rpx;
+    border-radius: 20rpx;  
+}
+.line{
+  height:2rpx;
+  background:#CDC5BF;
+}
+
+.myLogin1 {
+  background-color: #FFFFFF;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.font1{
+  margin-top: 25rpx;
+  margin-left: 40rpx;
+}
+
+.next1{
+   margin-top: 20rpx;
+   margin-left: 80rpx;
+    height: 60rpx;
+   width: 60rpx;
+    border-radius: 20rpx;  
+}
+.image1{
+   background-color: #FFFFFF;
+   margin-top: 10rpx;
+   margin-left: 150rpx;
+    height: 80rpx;
+   width: 340rpx;
+    border-radius: 20rpx;  
+   display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}

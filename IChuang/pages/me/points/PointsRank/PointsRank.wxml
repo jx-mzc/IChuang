@@ -1,0 +1,5 @@
+<!--pages/me/PointsRank/PointsRank.wxml-->
+
+<view class='pages'>
+  <text>pages/me/PointsDetils/PointsDetils.wxml</text>
+</view>

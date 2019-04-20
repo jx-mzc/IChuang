@@ -22,5 +22,12 @@ Page({
       url: 'study?json=' + JSON.stringify(name),
     })
   },
- 
+  adddetial: function () {
+    console.log("成功");
+    wx.navigateTo({
+      url: 'taolun/taolun',
+    })
+
+  },
+
 })

@@ -8,13 +8,13 @@ Page({
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    thissrc:"http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400",
+    thissrc:"",
     courses:[
       {
         classname: '大型数据库设计1', src: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
       },
       {
-        classname: '大型数据库设计2', src: 'http://129.204.200.64/123/images/VID_20190415_082745.mp4',
+        classname: '大型数据库设计2', src: 'http://129.204.200.64/v.f30.mp4',
       },
     ]
   },
@@ -44,6 +44,9 @@ Page({
     });
   },
   choose:function(e){
+    console.log(e)
+
+    
     var id = e.currentTarget.id;
     console.log(id);
     console.log(this.data.courses[id].src);
@@ -51,5 +54,18 @@ Page({
       thissrc: this.data.courses[id].src,
     })
     console.log(this.data.thissrc);
-  }
+  },
+  show:function(e){
+    console.log(e);
+  },
+ lianxi:function(e){
+   console.log(e)
+   var id = e.currentTarget.id;
+   console.log(id)
+   var name = this.data.courses[id].classname;
+   console.log(name)
+   wx.navigateTo({
+     url: 'lianxi/lianxi?classname=' + JSON.stringify(name),
+   })
+ }
 });

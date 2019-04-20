@@ -65,5 +65,29 @@ background: #FFFFFF;
 
 }
 .btn_color{
-  background-color:#9ACD32;
+  background-color:#199cad;
+}
+.font{
+margin-left: 30rpx;
+ display: -webkit-box;  /*设置为弹性盒子*/
+  -webkit-line-clamp: 1;  /*最多显示1行*/
+  overflow: hidden;  /*超出隐藏*/
+  text-overflow: ellipsis;  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;  /*强制英文单词自动换行*/
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+.backr{
+  background-color:#FFFAFA;
+  width: 20%;
+  
+}
+ .backl{
+  background-color:  #FFFFFF ;
+   width: 80%;
+   
 }

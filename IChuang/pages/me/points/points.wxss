@@ -1,0 +1,19 @@
+/* pages/me/points/points.wxss */
+
+.points_points {
+  text-align: center;
+  font-size: 100rpx;
+  margin: 50rpx;
+  padding: 50rpx;
+  border: 2rpx solid;
+  border-radius: 50rpx;
+}
+
+/*.points_ {
+  text-align: center;
+  font-size: 50rpx;
+  margin: 25rpx 150rpx 25rpx 150rpx;
+  border: 2rpx solid;
+  border-radius: 30rpx;
+  padding: 30rpx;
+}*/
