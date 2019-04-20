@@ -10,7 +10,7 @@ Page({
     input_value: "",//value值
     name_focus: true,//获取焦点
     person:[
-      { index: '小明', value: "123" },
+      { index: '小明', value: "123" },//person[0]
       { index: '张三', value: "456"},
       { index: '李四', value: "789" },
       { index: '王二', value: "741"},
@@ -41,7 +41,7 @@ Page({
     console.log(e);
     var id = e.currentTarget.id;
     console.log(id);
-    var name = that.data.person[id].index;
+    var name = that.data.person[id].index1;
     console.log(name);
     wx.navigateTo({
       url: '../sheyuanitem/sheyuanitem?json=' + JSON.stringify(name),

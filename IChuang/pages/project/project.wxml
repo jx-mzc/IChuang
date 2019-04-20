@@ -1,2 +1,50 @@
 <!--pages/project/project.wxml-->
-<text>pages/project/project.wxml</text>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
+          <block wx:for="{{project}}" data-item='item'>
+            <view class='card' id='{{index}}' bindtap='projectDetails'>
+              <view class="text_1">项目名称:{{item.index}}</view>
+              <text class="text_2">项目介绍:{{item.info}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <block wx:for="{{project}}" data-item='item' >
+            <view class='card' bindtap='projectDetails'  id='{{index}}'>
+              <view class="text_1">项目:{{item.index}}</view>
+              <text class="text_2">项目:{{item.info}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <block wx:for="{{project}}" data-item='item'>
+            <view class='card' bindtap='projectDetails' id='{{index}}'>
+              <view class="text_1">项目名称:{{item.index}}</view>
+              <text class="text_2">项目介绍:{{item.info}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <block wx:for="{{project}}" data-item='item'>
+            <view class='card' bindtap='projectDetails' id='{{index}}'>
+              <view class="text_1">项目名称:{{item.index}}</view>
+              <text class="text_2">项目介绍:{{item.info}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

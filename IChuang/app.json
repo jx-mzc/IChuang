@@ -1,9 +1,9 @@
 {
   "pages": [
-     
+    "pages/me/feedback/feedback",
+    "pages/project/project",
     "pages/shouye/shouye",
     "pages/study/study",
-    "pages/project/project",
     "pages/me/me",
     "pages/me/kongxian/kongxian",
     "pages/study/studyfirst",
@@ -12,8 +12,9 @@
     "pages/shouye/xinxi/huodongxinxi/huodongxinxi",
     "pages/shouye/xinxi/huodongxinxiitem/huodongxinxiitem",
     "pages/shouye/xinxi/bisaixinxi/bisaixinxi",
-    "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem"
-  
+    "pages/shouye/xinxi/bisaixinxiitem/bisaixinxiitem",
+    "pages/project/projectDetails/projectDetails",
+    "pages/me/install/install"
   ],
   "window": {
     "backgroundTextStyle": "light",

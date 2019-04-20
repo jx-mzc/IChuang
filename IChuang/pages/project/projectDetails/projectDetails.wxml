@@ -1,0 +1,43 @@
+<!--pages/project/projectDetails/projectDetails.wxml-->
+
+<view class="photo">
+  <text class="font">{{name}}</text> 
+</view> 
+<view class="boom">
+  <text class="font">项目名称</text>
+  <text class="textr">闵智超</text>
+</view>
+<view class="boom">
+  <text class="font">发布人</text>
+  <text class="textr">闵智超</text>
+</view>
+<view class="boom">
+  <text class="font">开始时间</text>
+  <text class="textr">2017.10.10</text>
+</view>
+<view class="boom">
+  <text class="font">结束时间</text>
+  <text class="textr">2017.10.10</text>
+</view>
+<view class="boom">
+  <text class="font">项目类型</text>
+  <text class="textr">闵智超</text>
+</view>
+<view class="boom">
+  <text class="font">级别</text>
+  <text class="textr">闵智超</text>
+</view>
+<view class="boom">
+  <text class="font">项目简介</text>
+  <text class="textr">闵智超</text>
+</view>
+<view class="boom">
+  <text class="font">展示图</text>
+  <text class="textr">闵智超</text>
+</view>
+
+<view class="photoboom">
+  <view class = "textboom" bindtap='showfile'>查看活动文档</view>
+
+</view>
+

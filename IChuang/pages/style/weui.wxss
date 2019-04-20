@@ -1061,6 +1061,7 @@ icon {
   top: 0;
   width: 100%;
   border-bottom: 1rpx solid #ccc;
+  background-color: #f8f8f8;
 }
 
 .weui-navbar__item {

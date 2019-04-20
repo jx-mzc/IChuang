@@ -1,0 +1,58 @@
+/* pages/project/projectDetails/projectDetails.wxss */
+
+.topview{
+  background-color:#FF8C69;
+  width: 97%;
+  border-radius: 20rpx;
+  margin-left: 10rpx;
+  height: 250rpx;
+  font-size: 50rpx;
+  display: flex;
+  text-align: center;
+  line-height: 200rpx;
+}
+.photo{
+   background-color:#FFFFFF;
+  width: 97%;
+  margin-left: 10rpx;
+  height: 250rpx;
+  font-size: 50rpx;
+  display: flex;
+  text-align: center;
+  line-height: 200rpx;
+}
+.font{
+  margin-left: 40rpx;
+}
+.boom{
+ background-color:#FFFFFF;
+  width: 97%;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  height: 100rpx;
+  display: flex;
+  
+  line-height: 100rpx;
+}
+.textr{
+  margin-left: 100rpx;
+}
+
+.photoboom{
+  width: 100%;
+   margin-top: 10rpx;
+  margin-left: 10rpx;
+  height: 100rpx;
+  display: flex;
+  line-height: 100rpx;
+}
+
+.textboom{
+  margin-left: 20rpx;
+  border-radius: 20rpx;
+  background-color:#E0FFFF;
+  width: 45%;
+  height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
