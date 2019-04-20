@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 <!--pages/project/project.wxml-->
-=======
+
 <!--pages/me/appraisal/appraisal.wxml-->
->>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
+
 <view class="page">
   <view class="page__bd">
     <view class="weui-tab">
@@ -15,7 +15,7 @@
         <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
       </view>
       <view class="weui-tab__panel">
-<<<<<<< HEAD
+
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
 
           <block wx:for="{{project}}" data-item='item'>
@@ -49,11 +49,11 @@
             </view>
           </block>
         </view>
-=======
+
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">所有项目 </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">正在申请的项目</view>
         <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
->>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
+
       </view>
     </view>
   </view>

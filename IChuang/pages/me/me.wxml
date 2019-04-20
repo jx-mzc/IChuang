@@ -45,11 +45,7 @@
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
-<<<<<<< HEAD
-        <navigator url="install/install" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-=======
         <navigator url="shezhi/shezhi" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
->>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
           <view class="weui-cell__hd">
             <image src="../images/icon/Settings.png" style="width: 20px;height: 20px;margin-right: 5px" />
           </view>

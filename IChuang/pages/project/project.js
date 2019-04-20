@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 
 Page({
@@ -30,17 +30,6 @@ Page({
         info: '所谓的K12教育，“K”代表Kindergarten(幼儿园)'
       },
     ]
-=======
-// pages/me/appraisal/appraisal.js
-var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-
-Page({
-  data: {
-    tabs: ["所有", "申请中", "申请失败"],
-    activeIndex: 1,
-    sliderOffset: 0,
-    sliderLeft: 0
->>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
   },
   onLoad: function() {
     var that = this;
@@ -53,7 +42,7 @@ Page({
       }
     });
   },
-<<<<<<< HEAD
+
   projectDetails:function(e) {
     console.log(e)
     var id = e.currentTarget.id;
@@ -65,17 +54,13 @@ Page({
       url: 'projectDetails/projectDetails?title=' + JSON.stringify(title),
     })
   },
-=======
->>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
+
+
   tabClick: function(e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
   }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 0774c819770533de41cc4a63b91184ef36243fa8
 });
