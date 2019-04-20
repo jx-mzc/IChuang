@@ -1,5 +1,69 @@
-<view class='myLogin'>
-  <view class='font'>头像</view>
-  <view class='image'></view>
+<view class='myLogin' bindtap='chooseimage'>
+  <view class='font'>{{name}}</view>
+  <image class='image' src='{{photo}}'></image> 
+  <image class='next' src='../../images/next.png'></image>
 </view>
 <view class='line'></view>
+<view class='line' style='margin-top:20rpx'></view>
+
+<view class='myLogin1'>
+  <view class='font1'>电话</view>
+  <text class='image1'>{{phone}}</text>
+  <image class='next1' src='../../images/next.png'></image>
+</view>
+<view class='line'></view>
+<view class='myLogin1'>
+
+  <view class='font1'>Q  Q</view>
+  <text class='image1'>{{qq}}</text>
+  <image class='next1' src='../../images/next.png'></image>
+</view>
+<view class='line'></view>
+
+<view class='myLogin1'>
+  <view class='font1'>兴趣</view>
+  <text class='image1'>{{insterest}}</text>
+  <image class='next1' src='../../images/next.png'></image>
+</view>
+<view class='line'></view>
+<view class='myLogin1'>
+  <view class='font1'>生日</view>
+  <text class='image1'>{{birthday}}</text>
+  <image class='next1' src='../../images/next.png'></image>
+</view>
+<view class='line'></view>
+<view class='line' style='margin-top:20rpx'></view>
+<view class='myLogin1'>
+  <view class='font1'>学号</view>
+  <text class='image1'>{{sno}}</text>
+
+</view>
+<view class='line'></view>
+<view class='myLogin1'>
+  <view class='font1'>学校</view>
+  <text class='image1'>{{school}}</text>
+
+</view>
+<view class='line'></view>
+<view class='myLogin1'>
+  <view class='font1'>社团</view>
+  <text class='image1'>{{association}}</text>
+
+</view>
+<view class='line'></view>
+<view class='myLogin1'>
+  <view class='font1'>年级</view>
+  <text class='image1'>{{grade}}</text>
+
+</view>
+<view class='line'></view>
+<view class='myLogin1'>
+  <view class='font1'>专业</view>
+  <text class='image1'>{{major}}</text>
+<view class='line'></view>
+</view>
+
+
+
+
+

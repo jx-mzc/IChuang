@@ -54,21 +54,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    /**
+     * 纵向轮播
+     * */
     var page = this;
     var navs = this.loadNavData();
     page.setData({ navs: navs });
-   
     var that = this;
-
     // 滚动数据配置
     var rollData = [
-  
       "小明成功申请项目A",
       "小明成功申请项目B",
       "小明成功申请项目C",
       "小明成功申请项目D",
     ];
-
     that.setData({
       rollData: rollData
     })

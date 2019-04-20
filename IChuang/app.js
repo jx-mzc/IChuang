@@ -35,6 +35,20 @@ App({
   },
   //全局变量
   globalData: {
-    username: null,
+      type: null,//登录类型
+      username: null,//姓名
+      phone: null,//电话
+      qq:null,//QQ
+      photo:null,//图片地址
+      insterest:null,//兴趣
+      birthday:null,//出生日期
+      sno:null,//学号
+      school:null,//学校
+      association:null,//社团
+      grade:null,//年级
+      major:null,//专业
+      
+      
+    
   }
 })

@@ -49,8 +49,8 @@ Page({
         success: function (res) {
           console.log(res);
           var name = JSON.stringify(res.data);
-          console.log(name)
-         
+          console.log(name)  
+        
           if (name == '{}') {
             console.log("失败")
             wx.showModal({
@@ -59,7 +59,8 @@ Page({
               content: '请检查账号或者密码',
             })
           } else {
-           
+            app.globalData.type = JSON.stringify(res.data.Account.types).replace(/"/g, "")//登录类型
+            console.log(app.globalData.type);
             console.log("成功")
             wx.switchTab({
               url: '../shouye/shouye',
