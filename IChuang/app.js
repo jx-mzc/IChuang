@@ -47,7 +47,7 @@ App({
       association:null,//社团
       grade:null,//年级
       major:null,//专业
-      
+      password:null//密码
       
     
   }

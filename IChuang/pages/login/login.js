@@ -1,4 +1,4 @@
-var app = getApp();     // 取得全局App
+ var app = getApp();     // 取得全局App
 Page({
   data: {
     account: '',
@@ -12,8 +12,8 @@ Page({
     this.setData({
       account: e.detail.value
     })
-    app.globalData.username = e.detail.value;  //赋值
-    console.log('赋值' + app.globalData.username);   //打印正确
+    app.globalData.sno = e.detail.value;  //赋值
+ //   console.log('赋值' + app.globalData.sno);   //打印正确
   },
 
   // 获取输入密码 
@@ -21,6 +21,8 @@ Page({
     this.setData({
       password: e.detail.value
     })
+    app.globalData.password = e.detail.value;  //赋值
+    console.log('密码' + app.globalData.password);   //打印正确
   },
 
   // 登录 
@@ -60,6 +62,7 @@ Page({
             })
           } else {
             app.globalData.type = JSON.stringify(res.data.Account.types).replace(/"/g, "")//登录类型
+            app.globalData.sno = JSON.stringify(res.data.Account.account).replace(/"/g, "")//登录类型
             console.log(app.globalData.type);
             console.log("成功")
             wx.switchTab({

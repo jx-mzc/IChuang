@@ -1,28 +1,28 @@
 <view class="photo">
   <text class="font">{{name}}</text> 
-  <image class='avatar'></image>
+  <image class='avatar' src='{{photo}}'></image>
 </view> 
 <view class="boom">
   <text class="font">学校</text>
-  <text class="textr">江西师范大学</text>
+  <text class="textr">{{school}}</text>
 </view>
 <view class="boom">
   <text class="font">年级</text>
-  <text class="textr">2019级</text>
+  <text class="textr">{{grade}}</text>
 </view>
 <view class="boom">
   <text class="font">学院</text>
-  <text class="textr">软件学院</text>
+  <text class="textr">{{major}}</text>
 </view>
 <view class="boom">
   <text class="font">学号</text>
-  <text class="textr">2019666666</text>
+  <text class="textr">{{sno}}</text>
 </view>
 <view class="boom">
   <text class="font">性别</text>
-  <text class="textr">男</text>
+  <text class="textr">{{sex}}</text>
 </view>
 <view class="boom">
   <text class="font">部门</text>
-  <text class="textr">办公室</text>
+  <text class="textr">{{apartment}}</text>
 </view>

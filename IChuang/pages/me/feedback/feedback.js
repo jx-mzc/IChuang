@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     hand:"请输入遇到的问题或建议...",
+      inputValue:'',
+      number:0,
+      photo:'../../images/addphoto.png'
   },
 
   /**
@@ -13,16 +16,53 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  bindinput:function(e){
+    console.log(e.detail.value)
+    this.data.inputValue = e.detail.value
+    this.setData({
+     number :this.data.inputValue.length
+    })
+    console.log(this.data.number)
+  },
+  /**
+  * 选择图片
+  */
+  chooseimage: function () {
+    var that = this;
     wx.chooseImage({
-      count:9,
-      sizeType:['original','compressed'],//可以指定是原图还是压缩图，默认二者都有
-      sourceType:['album','camera'],//可以指定来源是相册还是相机，默认二者都有
-      success: function (res) {// 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        var tempFilePaths = res.tempFilePaths
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album'],
+      success: function (res) {
+        console.log(res)
+        console.log(res.tempFilePaths)
+        that.setData({
+          photo :res.tempFilePaths
+        })
+        console.log(that.data.photo)
       },
     })
+
   },
 
+  /**
+   * 上传反馈意见到后台哦数据库
+   */
+  gotoShow:function(){
+
+    wx.showModal({
+      
+      content: '您提交的反馈我们将会认真解决，谢谢您的反馈',
+      showCancel:false,
+    })
+    this.setData({
+      // hand: "请输入遇到的问题或建议...",
+      // inputValue: '',
+      // number: 0,
+      photo: '../../images/addphoto.png'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

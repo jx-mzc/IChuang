@@ -1,0 +1,38 @@
+<view hidden='{{isBinbExpert1}}' class='input'>
+  <input value='{{value}}' bindinput="get1"></input>
+  <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
+    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit1">修改</button>
+
+  </view>
+  <!-- <view bindtap='get1'>修改电话</view> -->
+</view>
+<view hidden='{{isBinbExpert2}}' class='input'>
+  <input value='{{value}}' bindinput="get2"></input>
+  <!-- <view bindtap='get2'>修改QQ</view> -->
+  <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
+    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit2">修改</button>
+
+  </view>
+</view>
+<view hidden='{{isBinbExpert3}}' class='input'>
+  <input value='{{value}}' bindinput="get3"></input>
+  <!-- <view bindtap='get3'>修改修去</view> -->
+  <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
+    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit3">修改</button>
+
+  </view>
+</view>
+
+<view hidden='{{isBinbExpert4}}' class='input'>
+  <input value='{{value}}' bindinput="get4"></input>
+  <!-- <view bindtap='get4'>修改生日</view> -->
+
+  <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
+
+    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit4">修改</button>
+  </view>
+</view>
+ 
+<view class='line' bindinput="get4"></view>
+<view  hidden='{{isBinbExpert4}}' style='margin-top:30rpx;margin-left:50rpx'>格式如：1980-10-10</view>
+<view bindtap='get1'></view>

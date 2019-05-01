@@ -100,3 +100,25 @@ page {
   box-sizing: border-box;
   margin-right: 20rpx;
 }
+.items{
+    margin-left: 20rpx;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  width: 95%;
+  height: 100rpx;
+  display: flex;
+ background-color: #FFFFFF;
+  flex-direction: row;
+   align-items: center;
+  justify-content: center;  
+}
+.textl{
+  margin-left: 30rpx;
+  font-size: 40rpx;
+ width: 50%
+}
+.textr{
+   width: 50%;
+    font-size: 40rpx;
+}
+page{background-color:#F8F8F8;}

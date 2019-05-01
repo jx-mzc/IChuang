@@ -1,0 +1,27 @@
+
+<view class='view' style='margin-top:50rpx'>
+  <view class='viewleft'>原密码:</view>
+  
+  <view class='viewr'>
+ <input class="" password="true" placeholder="填写原密码" bindinput="passwordInputOld" />
+  <view  style='height:2rpx;background:#CDC5BF'></view>
+  </view>
+</view>
+
+<view class='view'style='margin-top:30rpx'>
+  <view class='viewleft' >新密码:</view>
+  
+  <view class='viewr'>
+ <input class="" password="true" placeholder="填写新密码" bindinput="passwordInputNew" />
+  <view  style='height:2rpx;background:#CDC5BF'></view>
+  </view>
+</view>
+<view class='view' style='margin-top:30rpx'>
+  <view class='viewleft'>确认密码:</view>
+  
+  <view class='viewr'>
+ <input class="" password="true" placeholder="再次填写确认" bindinput="ispasswordInput" />
+  <view  style='height:2rpx;background:#CDC5BF'></view>
+  </view>
+</view>
+ <button class="" style='width:200rpx;heigth:150rpx;margin-top:20rpx;margin-left:500rpx 'type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="changepwd">修改</button>

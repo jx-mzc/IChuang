@@ -43,7 +43,7 @@
         </view> 
     </view>
     <view class="tr">
-      <view class="td">14:00-17:00</view>
+      <view class="td"><text  decode="{{true}}">14:00-\n17:00</text></view>
       <view class="td" bindtap='showImg8' > 
           <image class="image"  src="{{url8}}" style='width:50rpx;height:50rpx' mode='aspectFill'></image>
         </view> 
@@ -67,7 +67,7 @@
         </view> 
     </view>
     <view class="tr">
-      <view class="td">19:00-22:00</view>
+      <view class="td"><text  decode="{{true}}">19:00-\n22:00</text></view>
       <view class="td" bindtap='showImg15' > 
           <image class="image"  src="{{url15}}" style='width:50rpx;height:50rpx' mode='aspectFill'></image>
         </view> 

@@ -9,7 +9,7 @@
   flex-direction: row;
 }
 .image{
-   background-color: rgb(226, 42, 42);
+   background-color: #FFFFFF;
    margin-top: 60rpx;
    margin-left: 60rpx;
     height: 160rpx;
@@ -31,6 +31,18 @@
 .font1{
    margin-top: 10rpx;
    margin-left: 30rpx;
+}
+.login-out{
+  margin-top: 100rpx;
+  margin-left: 30rpx;
+  border-radius: 10rpx;
+  height: 100rpx;
+  width: 90%;
+  background: #66CD00;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  font-size: 50rpx
 }
 .next{
   margin-top: 140rpx;

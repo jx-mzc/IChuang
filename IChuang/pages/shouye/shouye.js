@@ -12,9 +12,9 @@ Page({
     circular:true,
     current:0,
     imgUrls: [
-      "http://129.204.200.64/123/images/haibao/haibao-1.jpg",
-      "http://129.204.200.64/123/images/haibao/haibao-2.jpg",
-      "http://129.204.200.64/123/images/haibao/haibao-3.jpg"
+      "../images/act3.jpg",
+      "../images/act2.jpg",
+      "../images/act3.jpg"
     ],
     navs:[],
   },
@@ -54,6 +54,82 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if (app.globalData.type == 1) {//社员登录
+      wx.request({
+        url: 'https://www.iwchuang.cn/ichuang/getMember.action?id=' + app.globalData.sno,
+        // data: JSON.stringify({ id: app.globalData.sno}),
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        // dataType:JSON,//该语句会将服务器端的数据自动转为string类型
+        success: function (res) {
+          console.log(res);
+
+          console.log("成功")
+          var person = JSON.stringify(res.data) //解析成string类型
+          var i = JSON.stringify(res.data.Member.photo).replace(/"/g, "")
+          var name = JSON.stringify(res.data.Member.name).replace(/"/g, "")
+
+          getApp().globalData.username = JSON.stringify(res.data.Member.name).replace(/"/g, "")
+          getApp().globalData.phone = JSON.stringify(res.data.Member.phone).replace(/"/g, "")
+          getApp().globalData.insterest = JSON.stringify(res.data.Member.interest).replace(/"/g, "")
+          getApp().globalData.qq = JSON.stringify(res.data.Member.qq).replace(/"/g, "")
+          getApp().globalData.birthday = JSON.stringify(res.data.Member.birthday).replace(/"/g, "")
+          getApp().globalData.sno = JSON.stringify(res.data.Member.id).replace(/"/g, "")
+          getApp().globalData.association = JSON.stringify(res.data.Member.club_name).replace(/"/g, "")
+          getApp().globalData.school = JSON.stringify(res.data.Member.school_name).replace(/"/g, "")
+          getApp().globalData.grade = JSON.stringify(res.data.Member.grade).replace(/"/g, "")
+          getApp().globalData.major = JSON.stringify(res.data.Member.major).replace(/"/g, "")
+          getApp().globalData.photo = JSON.stringify(res.data.Member.photo).replace(/"/g, "")
+
+          console.log(getApp().globalData.association);
+          console.log(getApp().globalData.school);
+          console.log(getApp().globalData.qq);
+          console.log(getApp().globalData.photo);
+        },
+        fail: function (res) {
+          console.log(".....fail.....");
+        },
+        complete: function () {
+          // complete
+          console.log('submit comlete');
+        }
+      })
+    }
+    if (app.globalData.type == 4) {//管理员登录
+      wx.request({
+        url: 'https://www.iwchuang.cn/ichuang/getAdmin.action',
+        data: JSON.stringify({ id: app.globalData.sno }),
+        method: 'POST',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        // dataType:JSON,//该语句会将服务器端的数据自动转为string类型
+        success: function (res) {
+          console.log(res);
+          console.log("有用值" + res.data.Admin);//有用值
+          console.log("成功")
+          var person = JSON.stringify(res.data) //解析成string类型
+          // var i = JSON.stringify(res.data.Admin.photo).replace(/"/g, "")
+          // var name = JSON.stringify(res.data.Admin.name).replace(/"/g, "")
+          // self.setData({
+          //   photo: i,
+          //   name: name
+          // })
+          // console.log(self.data.photo);
+          // console.log(self.data.name);
+
+        },
+        fail: function (res) {
+          console.log(".....fail.....");
+        },
+        complete: function () {
+          // complete
+          console.log('submit comlete');
+        }
+      })
+    }
     /**
      * 纵向轮播
      * */
@@ -164,24 +240,5 @@ Page({
     })
   },
 
-  bindtest: function () {
-    wx.request({
-      // url: 'http://129.206.200.64/weiDemo/demoServlet',
-      url: 'http://129.204.200.64/weiDemo/demoServlet',
-      data: {
-        username: '001',
-        password: 'abc'
-      },
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res.data);
-      },
-      fail: function (res) {
-        console.log(".....fail.....");
-      }
-    })
-  }
+ 
 })

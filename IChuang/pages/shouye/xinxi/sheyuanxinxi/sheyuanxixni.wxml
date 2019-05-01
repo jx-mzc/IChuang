@@ -1,19 +1,19 @@
 <view class="SearchBox">
-  <view class="Search_input_top_box">
+  <view class="Search_input_top_box" bindtap='getSearch'>
     <view class="Search_ico_box">
       <image class="Search_ico" src='../images/tab/soushuo.png'></image>
     </view>
-    <input class="Search_Input" focus="{{name_focus}}" placeholder='请输入社员姓名' bindinput='inputvalue' value="{{input_value}}"></input>
-    <view class="Search_btn" bindtap='search'>搜索</view>
+    <text class="Search_Input" focus="{{name_focus}}" placeholder='请输入社员姓名' bindinput='inputvalue' value="{{input_value}}">请输入社员姓名</text>
+  
   </view>
   <view class="Search_xian"></view>
-  
+
 </view>
-
-
-<view wx:for="{{person}}" data-item='item'>
+<block wx:for='{{person}}' data-item='item'>
   <view class="items" bindtap='navBtn' id="{{index}}">
-   <text class="textl">姓名:{{item.index}}</text>
-    <text class="textr">学号:{{item.value}}</text>
-  </view>
-</view>
+
+      <text class="textl">{{item.name}}</text>
+      <text class="textr">{{item.sno}}</text>
+    </view>
+
+</block>

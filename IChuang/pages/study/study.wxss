@@ -54,6 +54,10 @@ background: #FFFFFF;
 font-size: 30rpx;
 margin-left: 30rpx;
 width: 680rpx;
+display: flex;
+flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 text-overflow:ellipsis;
 word-wrap:break-word;
@@ -88,6 +92,6 @@ margin-left: 30rpx;
 }
  .backl{
   background-color:  #FFFFFF ;
-   width: 80%;
+   width: 100%;
    
 }

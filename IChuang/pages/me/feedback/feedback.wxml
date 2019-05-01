@@ -1,18 +1,11 @@
 <!--pages/me/feedback/feedback.wxml-->
-<view class="weui-cells__title">文本域</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="请输入遇到的问题或建议..." style="height: 3.3em" />
-                    <view class="weui-textarea-counter">0/400</view>
-                </view>
-            </view>
-            <view class="container">
-  <view>
-    <button type="default" bindtap="gotoShow" >点击上传照片</button> 
-  </view>
-  <view>
-    <image class= "show-image" mode="aspectFitf" src="{{src}}"></image>
-  </view>
+<view   style='height:2rpx;background:#CDC5BF'></view>
+<view class="background">
+  <textarea class="weui-textarea" maxlength='400' placeholder="{{hand}}" style="height: 6em" bindinput="bindinput" />
+  <view class="weui-textarea-counter">{{number}}/400</view>
 </view>
-        </view>
+<view   style='height:2rpx;background:#CDC5BF'></view>
+<image src='{{photo}}' bindtap='chooseimage' style='height:200rpx;width:200rpx;margin-top:20rpx;margin-left:20rpx;'></image>
+<view>
+  <button type="default" bindtap="gotoShow">反馈意见</button>
+</view>

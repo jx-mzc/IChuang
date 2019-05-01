@@ -6,27 +6,26 @@
 <view class='line'></view>
 <view class='line' style='margin-top:20rpx'></view>
 
-<view class='myLogin1'>
+<view class='myLogin1' catchtap='change' id='1'>
   <view class='font1'>电话</view>
   <text class='image1'>{{phone}}</text>
   <image class='next1' src='../../images/next.png'></image>
 </view>
 <view class='line'></view>
-<view class='myLogin1'>
-
+<view class='myLogin1' catchtap='change' id='2'>
   <view class='font1'>Q  Q</view>
   <text class='image1'>{{qq}}</text>
   <image class='next1' src='../../images/next.png'></image>
 </view>
 <view class='line'></view>
 
-<view class='myLogin1'>
+<view class='myLogin1' catchtap='change' id='3'>
   <view class='font1'>兴趣</view>
   <text class='image1'>{{insterest}}</text>
   <image class='next1' src='../../images/next.png'></image>
 </view>
 <view class='line'></view>
-<view class='myLogin1'>
+<view class='myLogin1' catchtap='change' id='4'>
   <view class='font1'>生日</view>
   <text class='image1'>{{birthday}}</text>
   <image class='next1' src='../../images/next.png'></image>

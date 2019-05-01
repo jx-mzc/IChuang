@@ -1,9 +1,11 @@
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    person:[],
     inpuVal: "",//input框内值
     listarr:[null],//创建数组
     SearchText: '搜索',//按钮值
@@ -16,109 +18,72 @@ Page({
     this.setData({
       inputVal: e.detail.value
     })
+    console.log(this.data.inputVal)
     if (e.detail.cursor != 0) {
       this.setData({
         keydown_number: 1, 
       })
       
-    
     }
   },
   //搜索方法
   search: function () {
-    if (this.data.keydown_number == 1) {//
-      let This = this;
-      //把获取的input值插入数组里面
-      let arr = this.data.listarr;
-      var i = this.data.input_value;
-      // console.log(this.data.inputVal)
-      console.log(this.data.inputVal);
-       let name = this.data.inputVal
-      console.log("输入的值" + name + "输入的值");
-      arr.push(name);
-      console.log(arr);
-        wx.navigateTo({
-        url: '../sheyuanitem/sheyuanitem?json=' + JSON.stringify(name),
-        })
-      this.data.inputVal = i;
-      this.data.keydown_number=0;
-      console.log(this.data.inputVal)
-      //判断取值是手动输入还是点击赋值
-      if (this.data.input_value == "") {//手动输入
-         console.log('手动输入')
-        // 判断数组中是否已存在
-        let arrnum = arr.indexOf(this.data.inputVal);//indexOf检索字符串，没有检索到返回-1
-        console.log('进来第' + arrnum+'个');
-        if (arrnum != -1) {
-          // 删除已存在后重新插入至数组
-          console.log(this.data.inputVal);
-          arr.splice(arrnum, 1);
-          arr.unshift(this.data.inputVal);//unshift将新加的元素放在起始位置
-        } else {
-          console.log("插到首个位置");
-          arr.unshift(this.data.inputVal);
-        }
-
-      } else {//点击赋值
-        console.log('点击赋值')
-        let arr_num = arr.indexOf(this.data.input_value);
-        console.log('点击赋值' + arr_num + '点击赋值');
-        if (arr_num != -1) {
-          arr.splice(arr_num, 1)
-          arr.unshift(this.data.input_value);
-        } else {
-          arr.unshift(this.data.input_value);
-        }
-    
-      }
-      // console.log(arr)
-
-      //存储搜索记录
-      wx.setStorage({
-        key: "list_arr",
-        data: arr
-      })
-
-
-      //取出搜索记录
-      wx.getStorage({
-        key: 'list_arr',
-        success: function (res) {
-          console.log(res)
-          This.setData({
-            listarr: res.data
+    var that = this;
+    console.log(that.data.inputVal)
+    wx.request({
+      // console.log(getApp().globalData.association);
+      // console.log(getApp().globalData.school);
+      url: 'https://www.iwchuang.cn/ichuang/listMember.action?name='+that.data.inputVal,
+      // data: JSON.stringify(),
+      method: 'POST',
+      // data: JSON.stringify({ name: that.data.inputVal, club_name: app.globalData.association}),
+      header: {
+        // 'content-type': 'application/json' // 默认值
+        'content-type':'application/x-www-from-urlencoded;charset=utf-8'
+      },
+      // dataType:JSON,//该语句会将服务器端的数据自动转为string类型
+      success: function (res) {
+        console.log(res);
+        console.log(res.data.length);
+        if(res.data.rows.length ==  0){
+            wx.showModal({
+              title: '提示',
+              content: '该社团没有该成员',
+              showCancel:false
+            })
+        }else{
+          for (var i = 0; i <= res.data.rows.length - 1; i++) {
+            that.data.person.push({ name: res.data.rows[i].name, sno: res.data.rows[i].id });
+          }
+          var person = that.data.person
+          that.setData({//赋值给本地
+            person: person
           })
+          console.log(that.data.person)
         }
-      })
-     
-    } else {//input框没内容
-      
-      console.log("取消")
-    }
+      },
+      fail: function (res) {
+        console.log(".....fail.....");
+      },
+      complete: function () {
+        // complete
+        console.log('submit comlete');
+      }
+    })
+  },
+  
+  navBtn: function (e) {
+    var that = this;
+    console.log(e);
+    var id = e.currentTarget.id;
+    console.log(id);
 
-  },
-  //清除搜索记录
-  delete_list: function () {
-    //清除当前数据
-    this.data.inputVal=""
-    this.setData({
-      listarr: []
-    });
-    //清除缓存数据
-    wx.removeStorage({
-      key: 'list_arr'
-    })
-  },
-  //点击赋值到input框
-  this_value: function (e) {
-    this.setData({
-      name_focus: true
-    })
-    let value = e.currentTarget.dataset.text;
-    this.data.inputVal=value
-    this.setData({
-      input_value: value,
-      keydown_number: 1
+    var name = that.data.person[id].name;
+    console.log(name);
+    var sno = that.data.person[id].sno;
+    console.log(sno);
+    wx.navigateTo({
+      url: '../sheyuanitem/sheyuanitem?name=' + JSON.stringify(name) + '&sno=' + JSON.stringify(sno),
     })
   },
   /**

@@ -7,5 +7,12 @@
     <view class="Search_btn" bindtap='search'>{{SearchText}}</view>
   </view>
   <view class="Search_xian"></view>
-  
 </view>
+<block wx:for='{{person}}' data-item='item'>
+  <view class="items" bindtap='navBtn' id="{{index}}">
+
+      <text class="textl">{{item.name}}</text>
+      <text class="textr">{{item.sno}}</text>
+    </view>
+
+</block>

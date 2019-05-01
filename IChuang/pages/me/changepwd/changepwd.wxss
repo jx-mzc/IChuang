@@ -1,0 +1,18 @@
+/* pages/me/changepwd/changepwd.wxss */
+.view{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  display: flex;
+    /*row 横向  column 列表  */
+  flex-direction: row;
+ 
+}
+.viewleft{
+ width: 25%;
+ display: flex;
+  align-items: center;
+ font-size: 35rpx
+}
+.viewr{
+ width: 75%
+}

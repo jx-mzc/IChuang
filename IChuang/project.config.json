@@ -40,9 +40,9 @@
 			"current": 0,
 			"list": [
 				{
-					"id": 0,
-					"name": "me",
-					"pathName": "pages/me/me",
+					"id": -1,
+					"name": "学习",
+					"pathName": "pages/study/studyfirst",
 					"query": "",
 					"scene": null
 				}

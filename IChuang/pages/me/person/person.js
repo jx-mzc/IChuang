@@ -6,10 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"",//姓名
+    name:null,//姓名
     phone: null,//电话
     qq: null,//QQ
-    photo: null,//图片地址
+  
     insterest: null,//兴趣
     birthday: null,//出生日期
     sno: null,//学号
@@ -17,6 +17,7 @@ Page({
     association: null,//社团
     grade: null,//年级
     major: null,//专业
+    photo: null + Math.random() / 9999 
   },
 
   /**
@@ -25,7 +26,7 @@ Page({
   onLoad: function (options) {
     
     console.log(options)
-    var name=JSON.parse(options.name)
+    var name1 = getApp().globalData.username;
     var phone1 = getApp().globalData.phone;
     var qq1 = getApp().globalData.qq;
     var photo1 = getApp().globalData.photo;
@@ -37,9 +38,9 @@ Page({
     var grade1= getApp().globalData.grade;
     var  major1= getApp().globalData.major;
     console.log(phone1)
-    console.log(name)
+    console.log(name1)
     this.setData({
-      name:name,
+      name:name1,
       phone: phone1,
       qq: qq1,
       photo: photo1,
@@ -52,6 +53,36 @@ Page({
       major:major1,
     })
   },
+  change:function(e){
+    console.log(e)
+    var id = e.currentTarget.id
+
+    console.log(id)
+    if(id==1){
+      
+      wx.navigateTo({
+        url: 'phone/phone?JSON=' + JSON.stringify(getApp().globalData.phone) + "&id=" + JSON.stringify(1),
+      })
+    }
+    if (id == 2) {
+      wx.navigateTo({
+        url: 'phone/phone?JSON=' + JSON.stringify(getApp().globalData.qq) + '&id=' + JSON.stringify(2),
+      })
+    }
+    if (id == 3) {
+      wx.navigateTo({
+        url: 'phone/phone?JSON=' + JSON.stringify(getApp().globalData.insterest) +'&id='+JSON.stringify(3),
+      })
+    }
+    if (id == 4) {
+      wx.navigateTo({
+        url: 'phone/phone?JSON=' + JSON.stringify(getApp().globalData.birthday) + '&id=' + JSON.stringify(4),
+      })
+    }
+  },
+  /**
+   * 选择图片
+   */
   chooseimage:function(){
     var that = this;
     wx.chooseImage({
@@ -59,38 +90,27 @@ Page({
       sizeType:['original','compressed'],
       sourceType:['album'],
       success: function(res) {
-        // console.log(res)
-        // console.log(res.tempFilePaths)  
+        console.log(res)
+        console.log(res.tempFilePaths)  
         getApp().globalData.photo=res.tempFilePaths;  
-        
         var temFilePaths = res.tempFilePaths;
-
         wx.uploadFile({
-          url: '',
+          url: 'https://www.iwchuang.cn/ichuang/uploadMemberPhoto.action',
           filePath: temFilePaths[0],
-          name: 'name',//文件对应的key，在服务器获取key获取二进制内容
-          header:{
-            'content-type':'Application/json'
-          },
+          name: 'file',//文件对应的key，在服务器获取key获取二进制内容  
+
           formData:{//其他信息
-              imgName:"名称"
+              id:app.globalData.sno
           },
           success:function(res){
-            console("成功")
+
+            console.log(res)
+            console.log("成功")
           },
-          success: function (res) {
-            console("失败")
+          fail: function (res) {
+            console.log("失败")
           }
         })
-        // wx.getImageInfo({//获取图片信息
-        //   src: ''+that.data.photo,//获取图片信息格式？？？？？？？why
-        //   success:function(res){
-        //     console.log(res)
-        //   },
-        //   fail:function(res){
-        //     console.log("--失败--")
-        //   }
-        // })
 
       },
     })
@@ -107,7 +127,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+      this.onLoad()
   },
 
   /**

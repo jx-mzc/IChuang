@@ -12,7 +12,7 @@
   width: 280rpx
 }
 .image{
-   background-color: rgb(196, 36, 36);
+   background-color: #FFFFFF;
    margin-top: 60rpx;
    margin-left: 140rpx;
     height: 160rpx;

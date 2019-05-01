@@ -1,3 +1,4 @@
+var app = getApp();     // 取得全局App
 Page({
 
   /**
@@ -6,24 +7,62 @@ Page({
   data: {
     inpuVal: "",//input框内值
     SearchText: '搜索',//按钮值
-    keydown_number: 0,//检测input框内是否有内容
+    keydown_number: 0,//name检测input框内是否有内容
     input_value: "",//value值
     name_focus: true,//获取焦点
-    person:[
-      { index: '小明', value: "123" },//person[0]
-      { index: '张三', value: "456"},
-      { index: '李四', value: "789" },
-      { index: '王二', value: "741"},
-    ]
+    person:[],
+    page:1,//分页页数
+    rows:10//每页的10条数据
   },
   onLoad: function (options) {
 
+   
     let This = this;
     //设置当前页标题
     wx.setNavigationBarTitle({
       title: '社员信息'
     })
-   
+    var that = this;
+    wx.request({
+      url: 'https://www.iwchuang.cn/ichuang/listMember.action?school_name=' + app.globalData.school + '&club_name=' + app.globalData.association+ '&page=' + that.data.page + '&rows=' + that.data.rows,
+      method: 'POST',
+    // },
+      header: {
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-from-urlencoded;charset=utf-8'
+      },
+      // dataType:JSON,//该语句会将服务器端的数据自动转为string类型
+      success: function (res) {
+        console.log("成功");
+        console.log(res);
+        console.log(res.data.total)
+        console.log(res.data.rows.length)
+        if (res.data.rows.length!=0){
+          for (var i = 0; i <= res.data.rows.length - 1; i++) {
+            that.data.person.push({ name: res.data.rows[i].name, sno: res.data.rows[i].id });
+            var person = that.data.person
+            that.setData({//赋值给本地
+              person: person
+            })
+          }
+        } else if (res.data.rows.length == 0){
+         wx.showToast({
+           title: '信息加载完毕',
+           duration: 2000
+         })  
+        }
+        // wx.hideToast()
+      console.log(that.data.person)
+      },
+      fail: function (res) {
+        console.log(".....fail.....");
+      },
+      complete: function () {
+        // complete
+        console.log('submit comlete');
+      }
+    })
+
   },
   getSearch:function(){
     wx.navigateTo({
@@ -41,12 +80,16 @@ Page({
     console.log(e);
     var id = e.currentTarget.id;
     console.log(id);
-    var name = that.data.person[id].index1;
+
+    var name = that.data.person[id].name;
     console.log(name);
+    var sno = that.data.person[id].sno;
+    console.log(sno);
     wx.navigateTo({
-      url: '../sheyuanitem/sheyuanitem?json=' + JSON.stringify(name),
+      url: '../sheyuanitem/sheyuanitem?name=' + JSON.stringify(name) + '&sno=' + JSON.stringify(sno),
     })  
   },
+  
   //取值input判断输入框内容修改按钮
   inputvalue: function (e) {
     this.setData({
@@ -56,9 +99,18 @@ Page({
       this.setData({
         keydown_number: 1,
       })
-
-
     }
+  },
+   /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+      var page = this.data.page +1;
+      this.setData({
+        page :page
+      })
+      console.log(this.data.page)
+      this.onLoad()
   },
   //搜索方法
   search: function () {

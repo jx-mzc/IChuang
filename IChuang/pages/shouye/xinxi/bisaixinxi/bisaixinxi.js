@@ -5,9 +5,7 @@ var register = require('../../../../utils/refreshLoadRegister.js');
 Page({
   data: {
     currentSize: 0,
-    words: [
-      //    { id: i, index: "小明", value: "123", liuliang: "234" }
-    ]
+    words: []
   },
   onLoad: function () {
     var _this = this;

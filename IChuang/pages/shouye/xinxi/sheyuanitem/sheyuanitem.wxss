@@ -17,7 +17,7 @@
 .avatar{
     height: 200rpx;
     width: 200rpx;
-    background-color: #FF7256;
+    background-color:#FFFFFF;
     border-radius: 40rpx;
     margin-top: 20rpx;
     margin-left: 300rpx;
