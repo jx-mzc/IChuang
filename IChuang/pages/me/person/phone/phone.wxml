@@ -1,7 +1,8 @@
 <view hidden='{{isBinbExpert1}}' class='input'>
   <input value='{{value}}' bindinput="get1"></input>
   <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
-    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit1">修改</button>
+    <button class="" style='width:200rpx;heigth:150rpx;margin-top:20rpx' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit1">修改</button>
+
 
   </view>
   <!-- <view bindtap='get1'>修改电话</view> -->
@@ -10,7 +11,7 @@
   <input value='{{value}}' bindinput="get2"></input>
   <!-- <view bindtap='get2'>修改QQ</view> -->
   <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
-    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit2">修改</button>
+    <button class="" style='width:200rpx;heigth:150rpx;margin-top:20rpx' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit2">修改</button>
 
   </view>
 </view>
@@ -18,7 +19,7 @@
   <input value='{{value}}' bindinput="get3"></input>
   <!-- <view bindtap='get3'>修改修去</view> -->
   <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
-    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit3">修改</button>
+    <button class="" style='width:200rpx;heigth:150rpx;margin-top:20rpx' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit3">修改</button>
 
   </view>
 </view>
@@ -29,7 +30,7 @@
 
   <view class="" style='margin-top:200rpx;margin-left:150rpx;'>
 
-    <button class="" style='' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit4">修改</button>
+    <button class="" style='width:200rpx;heigth:150rpx;margin-top:20rpx' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="commit4">修改</button>
   </view>
 </view>
  

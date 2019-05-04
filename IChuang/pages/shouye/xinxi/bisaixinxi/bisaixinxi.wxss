@@ -21,15 +21,23 @@
   font-size:45rpx;
   margin-left: 50rpx;
 }
+.fontback{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+}
 .fontl{
    line-height: 100rpx;
   font-size:28rpx;
   margin-left: 50rpx;
   font-weight:100;
+  width: 40%
 }
 .fontr{
   line-height: 100rpx;
   font-size:28rpx;
   margin-left: 250rpx;
   font-weight:100;
+   width: 60%
 }

@@ -7,6 +7,12 @@ Page({
     tishi:''
   },
 
+  onLoad:function(){
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: 'i  创'
+    })
+  },
   // 获取输入账号 
   phoneInput: function (e) {
     this.setData({

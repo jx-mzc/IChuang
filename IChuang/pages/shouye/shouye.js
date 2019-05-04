@@ -54,6 +54,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+      //设置当前页标题
+      wx.setNavigationBarTitle({
+        title: 'i   创'
+      })
+  
     if (app.globalData.type == 1) {//社员登录
       wx.request({
         url: 'https://www.iwchuang.cn/ichuang/getMember.action?id=' + app.globalData.sno,

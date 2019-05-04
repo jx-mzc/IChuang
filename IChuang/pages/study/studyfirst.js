@@ -14,6 +14,11 @@ Page({
       rows:10//每页行数
   },
   onLoad:function(){
+   
+      //设置当前页标题
+      wx.setNavigationBarTitle({
+        title: '学习'
+      })
     
     var that = this;
     wx.request({

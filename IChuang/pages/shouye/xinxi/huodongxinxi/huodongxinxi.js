@@ -1,63 +1,81 @@
 //index.js
 //获取应用实例
 var app = getApp();
-var register = require('../../../../utils/refreshLoadRegister.js');
+
 Page({
   data: {
-    currentSize: 0,
-    words: [
-  //    { id: i, index: "小明", value: "123", liuliang: "234" }
-      ]
+    page: 1,//分页页数
+    rows: 10,//每页的10条数据
+    activity: []
   },
   onLoad: function () {
-    var _this = this;
-    register.register(this);
-    //获取words  
-    this.doLoadData(0, 6);
-  },
-  doLoadData(currendSize, PAGE_SIZE) {
-    wx.showLoading({
-      title: 'loading...',
-    });
     var that = this;
-    setTimeout(function () {
-      var length = currendSize + PAGE_SIZE;
-      // console.log('currendSize:', currendSize);
-      for (var i = currendSize; i < length; i++) {
-        /**从数据库中获取数组后赋值到words数组 */
-        that.data.words.push({ id: i, index: "小明", value: "123", liuliang: "234" });
+    wx.request({
+      url: 'https://www.iwchuang.cn/ichuang/listActivity.action?page='+this.data.page+'&rows='+this.data.rows,
+      method: 'POST',
+      header: {
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-from-urlencoded;charset=utf-8',
+      },
+      success: function (res) {
+        console.log("成功");
+        console.log(res);
+        console.log(res.data.total)
+        console.log(res.data.rows.length)
+        if (res.data.rows.length != 0) {
+          for (var i = 0; i <= res.data.rows.length - 1; i++) {
+            that.data.activity.push({ id: res.data.rows[i].id, name: res.data.rows[i].name, post: res.data.rows[i].post, end_time: res.data.rows[i].end_time });
+            var activity = that.data.activity
+            that.setData({//赋值给本地
+              activity: activity
+            })
+          }
+        } else if (res.data.rows.length == 0) {
+          wx.showToast({
+            title: '信息加载完毕',
+            duration: 2000
+          })
+        }
+        // wx.hideToast()
+        console.log(that.data.person)
+      },
+      fail: function (res) {
+        console.log(".....fail.....");
+      },
+      complete: function () {
+        // complete
+        console.log('submit comlete');
       }
-      var words = that.data.words;
-      that.data.currentSize += PAGE_SIZE;
-      that.setData({
-        words: words
-      });
-      wx.hideLoading();
-      register.loadFinish(that, true);
-    }, 2000);
+    
+    })
   },
-  //模拟刷新数据
-  refresh: function () {
 
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    var page = this.data.page + 1;
     this.setData({
-      words: [],
-      currentSize: 0
-    });
-    this.doLoadData(0, 6);
+      page: page
+    })
+    console.log(this.data.page)
+    this.onLoad()
   },
-  //模拟加载更多数据
-  loadMore: function () {
-    this.doLoadData(this.data.currentSize, 6);
-  },
+
+
+
+  //按钮跳转
   navBtn: function (e) {
     var that = this;
     console.log(e);
     var id = e.currentTarget.id;
     console.log(id);
-    var name = that.data.words[id].index;
+    var name = that.data.activity[id].name;
     console.log(name);
+    var id = that.data.activity[id].id;
+    console.log(id);
     wx.navigateTo({
-      url: '../huodongxinxiitem/huodongxinxiitem?json=' + JSON.stringify(name),
+      url: '../huodongxinxiitem/huodongxinxiitem?json=' + JSON.stringify(name) + '&id=' + JSON.stringify(id),
     })
   }
 })

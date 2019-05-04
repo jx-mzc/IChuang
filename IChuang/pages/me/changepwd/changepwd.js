@@ -10,6 +10,9 @@ Page({
     newpwd:'',
     ispwd:''
   },
+  
+
+ 
   // 获取输入原密码 
   passwordInputOld: function (e) {
     this.setData({
@@ -103,7 +106,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: '修改密码'
+    })
   },
 
   /**

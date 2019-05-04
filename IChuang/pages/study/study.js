@@ -172,9 +172,11 @@ Page({
    var id = e.currentTarget.id;
    console.log(id)
    var name = this.data.courseExcise[id].id;
+  //  var course_name = this.data.courseExcise[id].id;
    console.log(name)
    wx.navigateTo({
-     url: 'lianxi/lianxi?id=' + JSON.stringify(name),
+     url: 'lianxi/lianxi?id=' + JSON.stringify(name) + '&course_name=' + JSON.stringify(this.data.course_name),
+     
    })
  }
 });

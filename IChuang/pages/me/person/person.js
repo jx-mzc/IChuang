@@ -24,7 +24,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: '我的信息'
+    })
     console.log(options)
     var name1 = getApp().globalData.username;
     var phone1 = getApp().globalData.phone;

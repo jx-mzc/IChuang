@@ -4,7 +4,7 @@ var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 Page({
 
   data: {
-    tabs: ["未申请项目", "申请中项目", "申请成功项目", "申请失败项目"],
+    tabs: ["所有项目", "申请中",  "申请失败","申请成功"],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
@@ -32,7 +32,30 @@ Page({
     ]
   },
   onLoad: function() {
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: '项目'
+    })
+
     var that = this;
+    wx.request({
+      url: 'https://www.iwchuang.cn/ichuang/listProject.action',
+      method: 'POST',
+      header: {
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-from-urlencoded;charset=utf-8',
+      },
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (res) {
+        console.log(".....fail.....");
+      },
+      complete: function () {
+        // complete
+        console.log('onload方法结束');
+      }
+    })
     wx.getSystemInfo({
       success: function(res) {
         that.setData({

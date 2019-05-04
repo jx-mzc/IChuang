@@ -1,17 +1,12 @@
-<include src="../../utils/refreshHeaderView.wxml" />
-<include src="../../utils/loadMoreFooterView.wxml" />
-<scroll-view class="scroll_container" scroll-y="true" style="position:fixed;width:100%;left:0;height:{{windowHeight}}px;top:{{loadMoreHeight == 0? refreshHeight:-loadMoreHeight}}px;bottom:{{loadMoreHeight}}px;" bindscroll="scroll" bindscrolltolower="lower"
-  bindscrolltoupper="upper" bindtouchstart="start" bindtouchend="end">
-  <view style="width:100%;height:100%" bindtouchmove="move">
-    <block wx:for="{{words}}" data-item='item'>
-     <view class="show"  bindtap='navBtn' id="{{index}}">
-  <view class="font">{{item.id}}</view>
-  <view>
-    <text class="fontl">{{item.index}}</text>
-    <text class="fontr">{{item.value}}</text>
-  </view>
-
+<view style="width:100%;height:100%" bindtouchmove="move">
+  <block wx:for="{{activity}}" data-item='item'>
+    <view class="show" bindtap='navBtn' id="{{index}}">
+      <view class="font">{{item.name}}</view>
+      <view class="fontback">
+        <text class="fontl">{{item.post}}</text>
+        <text class="fontr">{{item.end_time}}</text>
       </view>
-    </block>
-  </view>
-</scroll-view>
+
+    </view>
+  </block>
+</view>

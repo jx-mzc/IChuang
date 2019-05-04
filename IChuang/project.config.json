@@ -41,9 +41,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "学习",
-					"pathName": "pages/study/studyfirst",
-					"query": "",
+					"name": "项目",
+					"pathName": "pages/project/project",
+					"query": "我的",
 					"scene": null
 				}
 			]

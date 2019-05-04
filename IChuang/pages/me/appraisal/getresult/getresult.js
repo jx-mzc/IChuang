@@ -13,6 +13,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: '考核结果'
+    })
     console.log(options)
     var choose = JSON.parse(options.json)
     var grade = JSON.parse(options.grade)

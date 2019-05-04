@@ -19,8 +19,13 @@
   text-align: center;
   line-height: 200rpx;
 }
+.font1{
+  margin-left: 40rpx;
+  
+}
 .font{
   margin-left: 40rpx;
+   width: 50%
 }
 .boom{
  background-color:#FFFFFF;
@@ -28,12 +33,16 @@
   margin-top: 10rpx;
   margin-left: 10rpx;
   height: 100rpx;
-  display: flex;
   
   line-height: 100rpx;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
 }
 .textr{
   margin-left: 100rpx;
+   width: 50%
 }
 
 .photoboom{

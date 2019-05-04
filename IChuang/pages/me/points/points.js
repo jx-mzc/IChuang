@@ -1,23 +1,59 @@
 // pages/me/points/points.js
-
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    mypoint:0,//我的积分
+     page: 1,//分页页数
+    rows: 10,//每页的10条数据
+    points:[]//积分事件
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    let This = this;
     //设置当前页标题
     wx.setNavigationBarTitle({
       title: '我的积分'
+    })
+var that = this;
+    wx.request({
+      url: 'https://www.iwchuang.cn/ichuang/listCourseExerciseResult.action?member_id=' + app.globalData.sno,
+      method: 'POST',
+      
+      header: {
+        'content-type': 'application/json' // 默认值
+        // 'content-type': 'application/x-www-from-urlencoded;charset=utf-8',
+      },
+      success(res) {
+        console.log('成功')
+        console.log(res)
+        if(res.data.rows.length!=0){
+          for (var i = 0; i < res.data.rows.length;i++){
+            
+            that.data.points.push({name: res.data.rows[i].exercise_name, point: res.data.rows[i].point });
+            var point = that.data.points
+            that.setData({//赋值给本地
+              points: point
+            })
+
+            //计算总积分
+            var sum = that.data.mypoint + res.data.rows[i].score
+            that.setData({
+              mypoint:sum
+            })
+          
+          }
+        }
+        console.log(that.data.mypoint)
+      },
+      fail(res) {
+        console.log('失败')
+      }
     })
   },
 

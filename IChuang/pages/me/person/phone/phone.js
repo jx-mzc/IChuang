@@ -19,7 +19,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {   
+  onLoad: function (options) {  
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: '修改'
+    }) 
     var json = JSON.parse(options.JSON)
     var id = JSON.parse(options.id)
     if(id==1){

@@ -17,6 +17,10 @@ Page({
 
 
   onLoad:function(e){
+    //设置当前页标题
+    wx.setNavigationBarTitle({
+      title: '我的'
+    })
     console.log(app.globalData.type);
     this.data.account=getApp().globalData.sno, // 获取全局变量并赋值给userId
       console.log("用户名" + this.data.account)

@@ -8,12 +8,25 @@
   border: 2rpx solid;
   border-radius: 50rpx;
 }
+.items{
+    margin-left: 20rpx;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  width: 95%;
+  height: 100rpx;
+  font-size: 30rpx;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+  
+}
+.textl{
+  margin-left: 30rpx;
+ width: 70%
+}
+.textr{
+   width: 30%
+}
 
-/*.points_ {
-  text-align: center;
-  font-size: 50rpx;
-  margin: 25rpx 150rpx 25rpx 150rpx;
-  border: 2rpx solid;
-  border-radius: 30rpx;
-  padding: 30rpx;
-}*/

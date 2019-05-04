@@ -1,11 +1,19 @@
 <!--pages/me/points/points.wxml-->
 
-<view class="pages">
-  <view class="page__bd">
+
+  
     <view class='points_points' style=" background:url('');">
-      131
+      {{mypoint}}
     </view>
-    <view class="weui-cells weui-cells_in-small-appmsg">
+   <block wx:for='{{points}}' data-item='item'>
+    <view class="items"  id="{{index}}">
+
+        <text class="textl">{{item.name}}学习</text>
+        <text class="textr">获得{{item.point}}积分</text>
+      </view>
+
+</block>
+    <!-- <view class="weui-cells weui-cells_in-small-appmsg">
       <navigator url="PointsDetils/PointsDetils" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__hd">
           <image src="../../images/icon/icon-details.png" style="width: 20px;height: 20px;margin-right: 5px" />
@@ -24,6 +32,6 @@
         </view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
-    </view>
-  </view>
-</view>
+    </view> -->
+    
+
