@@ -1,4 +1,4 @@
-
+var app = getApp();     // 取得全局App
 Page({
   data:{
     name:'',//活动名
@@ -12,6 +12,7 @@ Page({
 
   },
   onLoad: function (options) {
+    console.log(options)
     var name = JSON.parse(options.json)
     var id = JSON.parse(options.id)
     this.setData({
@@ -19,10 +20,10 @@ Page({
       id:id
     })
     console.log(name)
-    console.log("id"+this.data.id)
+    console.log(this.data.id)
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listActivity.action?id=' + that.data.id,
+      url: app.globalData.url +'listActivity.action?id=' + that.data.id,
     
       method: 'POST',
       header: {

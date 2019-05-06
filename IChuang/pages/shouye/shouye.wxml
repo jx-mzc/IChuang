@@ -1,9 +1,9 @@
 <!--轮播图-->
 <view class="haihao">
   <swiper circular="true" indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' current='{{current}}' bindchange='swiperChange'>
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{project}}">
       <swiper-item>
-        <image src="{{item}}" class="silde-image" style='width:100%' mode="aspectFill" bindtap='swiperClick'></image>
+        <image src="{{item.photo}}" class="silde-image" style='width:100%' mode="aspectFill" bindtap='swiperClick'></image>
       </swiper-item>
     </block>
   </swiper>
@@ -23,72 +23,28 @@
 <!-- 滚动部分 -->
 
 <view class='gundong-section'>
-  <image src="http://129.204.200.64/123/images/round-g.gif"></image>
+  <image src="../images/round-g.gif"></image>
   <view class="swiperview swiper-position">
     <swiper class="swiperitem" indicator-dots="true" autoplay="{{autoplay}}" vertical="true" circular="true">
-      <block wx:for="{{rollData}}">
+      <block wx:for="{{project_true}}">
         <swiper-item>
-          <text class="swiper-txt">{{item}}</text>
+          <text class="swiper-txt">{{item.apply_name}}成功申请了{{item.project_name}}</text>
         </swiper-item>
       </block>
     </swiper>
   </view>
 </view>
 
-
-
-<!--底部链接-->
-
-
 <view class='show'>
- <view class="divLine" ></view>
-    <view class="divLine2" ></view>
-      <view class="itemName" bindtap='btnAc1'>
-      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
-            <view > 活动1</view>
+  <view class=""></view>
+    <view class=""></view>
+      <block wx:for="{{acticity}}">
+        <view class="items" bindtap="btnAc" id="{{index}}">
+          <view>
+            <image class = "textl" src="../images/tongzhi.png" style="width:30rpx;height:30rpx"></image>
+          </view>
+          <view class = "textr"> {{item.name}}</view>
         </view>
-
-      <view class="divLine"></view>
-
-      <view class="itemName" bindtap='btnAc2'>
-      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
-            <view >活动2</view>
-        </view>
-      <view class="divLine"></view>
-      <view class="itemName" bindtap='btnAc3'>
-      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
-            <view >活动3</view>
-        </view>
-
-      <view class="divLine"></view>
-
-      <view class="itemName" bindtap='btnAc4'>
-      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
-            <view >活动4</view>
-        </view>
-      <view class="divLine"></view>
-      <view class="itemName" bindtap='btnAc5'>
-      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
-            <view >活动5</view>
-        </view>
-      <view class="divLine"></view>
-      <view class="itemName" bindtap='btnAc6'>
-      <image src="../images/tongzhi.png" style="width:50rpx;height:50rpx"></image>
-            <view >活动6</view>
-        </view>
-      <view class="divLine"></view>
-</view> 
-<!--<button bindtap='bindtest'>网络连接demo</button>
-
-<view wx:for="{{6}}">
-    <view class="wx-item">nihao</view>
+      </block>
+    <view class="divLine"></view>
 </view>
-.wx-item{
-  border: 2rpx;
-  background-color: #FF0000;
-  margin-top: 30rpx;
-  width: 97%;
-  height: 50rpx; 
-  border-radius: 20rpx;
-  margin-left: 10rpx;
-}

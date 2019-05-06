@@ -33,7 +33,7 @@ Page({
     wx.request({
       // console.log(getApp().globalData.association);
       // console.log(getApp().globalData.school);
-      url: 'https://www.iwchuang.cn/ichuang/listMember.action?name='+that.data.inputVal,
+      url: app.globalData.url +'listMember.action?name='+that.data.inputVal,
       // data: JSON.stringify(),
       method: 'POST',
       // data: JSON.stringify({ name: that.data.inputVal, club_name: app.globalData.association}),

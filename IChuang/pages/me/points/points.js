@@ -22,7 +22,7 @@ Page({
     })
 var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCourseExerciseResult.action?member_id=' + app.globalData.sno,
+      url: 'https://www.iwchuang.cn/ichuang/listCourseExerciseResult.action?member_id=' + app.globalData.sno + '&page=' + that.data.page + '&rows=' + that.data.rows,
       method: 'POST',
       
       header: {
@@ -48,6 +48,12 @@ var that = this;
             })
           
           }
+        }
+        else if (res.data.rows.length == 0) {
+          wx.showToast({
+            title: '信息加载完毕',
+            duration: 2000
+          })
         }
         console.log(that.data.mypoint)
       },
@@ -96,7 +102,17 @@ var that = this;
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading',
+      duration: 2000
+    })
+    var page = this.data.page + 1;
+    this.setData({
+      page: page
+    })
+    console.log(this.data.page)
+    this.onLoad()
   },
 
   /**

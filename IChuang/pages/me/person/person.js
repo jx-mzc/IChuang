@@ -98,7 +98,7 @@ Page({
         getApp().globalData.photo=res.tempFilePaths;  
         var temFilePaths = res.tempFilePaths;
         wx.uploadFile({
-          url: 'https://www.iwchuang.cn/ichuang/uploadMemberPhoto.action',
+          url: app.globalData.url +'uploadMemberPhoto.action',
           filePath: temFilePaths[0],
           name: 'file',//文件对应的key，在服务器获取key获取二进制内容  
 

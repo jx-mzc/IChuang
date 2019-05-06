@@ -11,7 +11,7 @@ Page({
   onLoad: function () {
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listActivity.action?page='+this.data.page+'&rows='+this.data.rows,
+      url: app.globalData.url +'listActivity.action?page='+this.data.page+'&rows='+this.data.rows,
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值

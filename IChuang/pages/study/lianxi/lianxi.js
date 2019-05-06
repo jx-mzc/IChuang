@@ -51,7 +51,7 @@ Page({
     var sec = options.sec;
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCourseExerciseQuestion.action?exercise_id=' + that.data.class_id,
+      url: app.globalData.url +'listCourseExerciseQuestion.action?exercise_id=' + that.data.class_id,
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值

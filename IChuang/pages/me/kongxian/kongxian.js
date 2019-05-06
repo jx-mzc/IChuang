@@ -1,4 +1,5 @@
 // pages/shouye/sheyuan/sheyuan.js
+var app = getApp();     // 取得全局App
 Page({
   /**
    * 页面的初始数据
@@ -587,7 +588,7 @@ Page({
     console.log(getApp().globalData.sno),
       console.log(that.data.arry[0].value),
       wx.request({
-        url: 'https://www.iwchuang.cn/ichuang/getFreeTime.action',
+      url: app.globalData.url +'getFreeTime.action',
         method: 'POST',
         data: JSON.stringify({
           member_id: getApp().globalData.sno,
@@ -602,7 +603,7 @@ Page({
             // console.log("不存在")
             wx.request({
 
-              url: 'https://www.iwchuang.cn/ichuang/addFreeTime.action',
+              url: app.globalData.url +'addFreeTime.action',
               method: 'POST',
               data: JSON.stringify({
                 id: getApp().globalData.sno,
@@ -660,7 +661,7 @@ Page({
 
   },
   //取消按钮点击事件
-  modalBindcancel: function() {
+    modalBindcancel: function() {
     this.setData({
       modalHidden: !this.data.modalHidden,
     })

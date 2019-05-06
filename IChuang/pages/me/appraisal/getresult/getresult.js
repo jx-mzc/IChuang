@@ -1,4 +1,5 @@
 // pages/me/appraisal/getresult/getresult.js
+var app = getApp();     // 取得全局App
 Page({
 
   /**

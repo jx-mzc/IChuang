@@ -1,4 +1,5 @@
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
+var app = getApp();     // 取得全局App
 Page({
   data: {
     course_name:'',//课程名
@@ -32,7 +33,7 @@ Page({
     })
     //请求获取教师信息
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/getTeacher.action?id='+that.data.id, 
+      url: app.globalData.url+'getTeacher.action?id='+that.data.id, 
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值
@@ -57,7 +58,7 @@ Page({
     })
     //请求获取课程信息
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCourseChapter.action?page=' + that.data.pages + '&rows=' + that.data.rows + '&course_name' + that.data.course_name,
+      url: app.globalData.url +'listCourseChapter.action?page=' + that.data.pages + '&rows=' + that.data.rows + '&course_name' + that.data.course_name,
       method: 'POST',
       // },
       header: {
@@ -99,7 +100,7 @@ Page({
     //请求获取课程练习信息
     wx.request({
       
-      url: 'https://www.iwchuang.cn/ichuang/listCourseExercise.action?page=' + that.data.pages + '&rows=' + that.data.rows,
+      url: app.globalData.url +'listCourseExercise.action?page=' + that.data.pages + '&rows=' + that.data.rows,
       method: 'POST',
       // },
       header: {

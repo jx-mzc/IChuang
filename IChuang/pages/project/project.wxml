@@ -16,37 +16,35 @@
 
           <block wx:for="{{project}}" data-item='item'>
             <view class='card' id='{{index}}' bindtap='projectDetails'>
-              <view class="text_1">项目名称:{{item.index}}</view>
-              <text class="text_2">项目介绍:{{item.info}}</text>
+              <view class="text_1">{{item.name}}</view>
+              <text class="text_2">{{item.introduction}}</text>
             </view>
           </block>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-          <block wx:for="{{project}}" data-item='item' >
-            <view class='card' bindtap='projectDetails'  id='{{index}}'>
-              <view class="text_1">项目:{{item.index}}</view>
-              <text class="text_2">项目:{{item.info}}</text>
+          <block wx:for="{{project_ing}}" data-item='item' >
+            <view class='card1' bindtap='projectDetails1'  id='{{index}}'>
+              <view class="text_11">{{item.project_name}}</view>
+              <view class="text_21">申请人：{{item.apply_name}}</view>
             </view>
           </block>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-          <block wx:for="{{project}}" data-item='item'>
-            <view class='card' bindtap='projectDetails' id='{{index}}'>
-              <view class="text_1">项目名称:{{item.index}}</view>
-              <text class="text_2">项目介绍:{{item.info}}</text>
+          <block wx:for="{{project_fail}}" data-item='item'>
+            <view class='card1' bindtap='projectDetails2' id='{{index}}'>
+             <view class="text_11">{{item.project_name}}</view>
+              <view class="text_21">申请人：{{item.apply_name}}</view>
             </view>
           </block>
         </view>
         <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
-          <block wx:for="{{project}}" data-item='item'>
-            <view class='card' bindtap='projectDetails' id='{{index}}'>
-              <view class="text_1">项目名称:{{item.index}}</view>
-              <text class="text_2">项目介绍:{{item.info}}</text>
+          <block wx:for="{{project_true}}" data-item='item'>
+            <view class='card1' bindtap='projectDetails3' id='{{index}}'>
+             <view class="text_11">{{item.project_name}}</view>
+              <view class="text_21">申请人：{{item.apply_name}}</view>
             </view>
           </block>
         </view>
-
-
       </view>
     </view>
   </view>

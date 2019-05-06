@@ -70,7 +70,7 @@ get1:function(e){
     //服务器修改
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/updateMember.action',
+      url: app.globalData.url +'updateMember.action',
       data: JSON.stringify({ id: app.globalData.sno, phone: that.data.phoneValue }),
       method: 'POST',
       header: {
@@ -110,7 +110,7 @@ get1:function(e){
   commit2: function () {   
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/updateMember.action',
+      url: app.globalData.url +'updateMember.action',
       data: JSON.stringify({ id: app.globalData.sno, qq: that.data.qqValue }),
       method: 'POST',
       header: {
@@ -151,7 +151,7 @@ get1:function(e){
   commit3: function () {
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/updateMember.action',
+      url: app.globalData.url +'updateMember.action',
       data: JSON.stringify({id: app.globalData.sno, interest: that.data.interValue }),
       method: 'POST',
       header: {
@@ -192,7 +192,7 @@ get1:function(e){
   commit4: function () {
    var that=this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/updateMember.action',
+      url: app.globalData.url +'updateMember.action',
       data: JSON.stringify({ id: app.globalData.sno, birthday: that.data.dataValue }),
       method: 'POST',
       header: {

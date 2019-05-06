@@ -1,5 +1,5 @@
 // pages/me/appraisal/getresult/getresult.js
-
+var app = getApp();     // 取得全局App
 var util = require('../../../../utils/util.js');
 Page({
 

@@ -1,4 +1,4 @@
-
+var app = getApp();     // 取得全局App
 Page({
   data: {
     name: '',//活动名
@@ -23,7 +23,7 @@ Page({
     console.log("id" + this.data.id)
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCompetition.action?id=' + that.data.id,
+      url: app.globalData.url +'listCompetition.action?id=' + that.data.id,
 
       method: 'POST',
       header: {

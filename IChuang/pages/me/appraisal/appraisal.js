@@ -38,12 +38,12 @@ Page({
 
     //设置当前页标题
     wx.setNavigationBarTitle({
-      title: '课程练习'
+      title: '我的考核'
     })
     console.log(options)
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listTestExercise.action',
+      url: app.globalData.url +'listTestExercise.action',
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值
@@ -62,7 +62,7 @@ Page({
       }
     }),
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listTestExerciseQuestion.action' ,
+      url: app.globalData.url +'listTestExerciseQuestion.action' ,
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值
@@ -146,7 +146,7 @@ Page({
               if (res.confirm) {
               
                 wx.request({
-                  url: 'https://www.iwchuang.cn/ichuang/addTestExerciseResult.action',
+                  url: app.globalData.url +'addTestExerciseResult.action',
                   method: 'POST',
                   data: JSON.stringify({
                     assessment_name: that.data.class_name,
@@ -190,7 +190,7 @@ Page({
       i: i + 1
     })
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCourseExerciseQuestion.action?exercise_id=' + that.data.class_id,
+      url: app.globalData.url +'listCourseExerciseQuestion.action?exercise_id=' + that.data.class_id,
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值
@@ -229,7 +229,7 @@ Page({
               if (res.confirm) {
             
                 wx.request({
-                  url: 'https://www.iwchuang.cn/ichuang/addTestExerciseResult.action',
+                  url: app.globalData.url +'addTestExerciseResult.action',
                   method: 'POST',
                   data: JSON.stringify({
                     assessment_name: that.data.class_name,

@@ -24,7 +24,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listMember.action?school_name=' + app.globalData.school + '&club_name=' + app.globalData.association+ '&page=' + that.data.page + '&rows=' + that.data.rows,
+      url: app.globalData.url +'listMember.action?school_name=' + app.globalData.school + '&club_name=' + app.globalData.association+ '&page=' + that.data.page + '&rows=' + that.data.rows,
       method: 'POST',
     // },
       header: {
@@ -105,6 +105,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    // wx.showToast({
+    //   title: '正在加载',
+    //   icon: 'loading',
+    //   duration: 2000
+    // })
       var page = this.data.page +1;
       this.setData({
         page :page

@@ -69,7 +69,7 @@ Page({
       console.log(that.data.newpwd)
       console.log(app.globalData.type)
       wx.request({
-        url: 'https://www.iwchuang.cn/ichuang/updateAccount.action',
+        url: app.globalData.url +'updateAccount.action',
         data: JSON.stringify({ account: app.globalData.sno, password: that.data.newpwd, types:app.globalData.type}),
         method: 'POST',
         header: {

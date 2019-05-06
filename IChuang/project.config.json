@@ -41,8 +41,8 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "项目",
-					"pathName": "pages/project/project",
+					"name": "shouye",
+					"pathName": "pages/shouye/shouye",
 					"query": "我的",
 					"scene": null
 				}

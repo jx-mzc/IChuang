@@ -101,46 +101,29 @@
 }
 /*展示部分*/
 .show{
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   background-color: #fff ;
   width: 97%;
-  height: 560rpx; 
+
   border-radius: 20rpx;
   margin-left: 10rpx;
   flex-direction: row;
 }
-.divLine2{
-background-color: #fff;
- width: 80%;
- height: 1rpx;
- margin-top: 20rpx;
-}
-.divLine{
- background-color: #fff;
- width: 90%;
- height: 13rpx;
- margin-left: 20rpx;
- margin-top: 5rpx;
-}
-.itemName{
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    margin-left: 10rpx;
-    width: 97%;
-    height: 70rpx;
-    border-radius: 20rpx;
-    align-items: center;
-}
-.clear{
-    padding-top: 30rpx;
-}
-.show2{
-  margin-top: 30rpx;
-  background: #FCFCFC ;
-  width: 94%;
-  height: 380rpx; 
-  border-radius: 20rpx;
+
+.items{
   margin-left: 20rpx;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  width: 95%;
+  height: 60rpx;
+  background-color: #FFFFFF;
+  display: flex;
   flex-direction: row;
-} 
+ 
+}
+.textl{
+ width: 50%
+}
+.textr{
+   width: 50%
+}

@@ -11,7 +11,7 @@ Page({
   onLoad: function () {
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCompetition.action?page=' + this.data.page + '&rows=' + this.data.rows,
+      url: app.globalData.url +'listCompetition.action?page=' + this.data.page + '&rows=' + this.data.rows,
       method: 'POST',
       header: {
         // 'content-type': 'application/json' // 默认值
@@ -54,6 +54,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    // wx.showToast({
+    //   title: '正在加载',
+    //   icon: 'loading',
+    //   duration: 2000
+    // })
     var page = this.data.page + 1;
     this.setData({
       page: page

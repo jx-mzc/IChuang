@@ -47,7 +47,7 @@ Page({
       })
       wx.request({
         // url: 'http://129.206.200.64/weiDemo/demoServlet',
-        url: 'https://www.iwchuang.cn/ichuang/login.action',
+        url: app.globalData.url +'login.action',
         data: JSON.stringify({ account: this.data.account, password: this.data.password }),
         method: 'POST',
         header: {

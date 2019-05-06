@@ -1,15 +1,12 @@
 // pages/study/studyfirst.js
+var app = getApp();     // 取得全局App
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      course:[
-        // { name: "大型数据库之斤斤计较", teacher: "闵智超", src:"http://129.204.200.64/123/images/haibao/haibao-1.jpg"},
-        // { name: "大型数据库之斤斤计较1", teacher: "闵智超11", src: "http://129.204.200.64/123/images/haibao/haibao-1.jpg" },
-        //  { name: "大型数据库之斤斤计较2", teacher: "闵智超2", src:"http://129.204.200.64/123/images/haibao/haibao-1.jpg"}
-      ],
+      course:[],
       pages:1,//分页页数
       rows:10//每页行数
   },
@@ -22,7 +19,7 @@ Page({
     
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/listCourse.action?page=' + that.data.pages + '&rows=' + that.data.rows,
+      url: app.globalData.url +'listCourse.action?page=' + that.data.pages + '&rows=' + that.data.rows,
       method: 'POST',
       // },
       header: {
@@ -62,10 +59,16 @@ Page({
     })
 
   },
+  
   /**
  * 页面上拉触底事件的处理函数
  */
   onReachBottom: function () {
+    // wx.showToast({
+    //   title: 'loading...',
+    //   icon: 'loading',
+    //   duration:2000
+    // })
     var page = this.data.page + 1;
     this.setData({
       page: page
@@ -73,6 +76,10 @@ Page({
     console.log(this.data.page)
     this.onLoad()
   },
+
+  /**
+   * 点击事件
+   */
   navBtn: function (e) {
     var that = this;
     console.log(e);

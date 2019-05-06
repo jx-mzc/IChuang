@@ -1,4 +1,5 @@
 // pages/shouye/xinxi/sheyuanitem/sheyuanitem.js
+var app = getApp();     // 取得全局App
 Page({
 
   /**
@@ -29,7 +30,7 @@ Page({
     console.log(sno)
     var that = this;
     wx.request({
-      url: 'https://www.iwchuang.cn/ichuang/getMember.action?id=' + that.data.sno,
+      url: app.globalData.url +'getMember.action?id=' + that.data.sno,
       // data: JSON.stringify({ id: that.data.sno}),
       method: 'POST',
       header: {

@@ -30,7 +30,7 @@ Page({
     var self = this;
     if (app.globalData.type==1){//管理员登录
       wx.request({
-        url: 'https://www.iwchuang.cn/ichuang/getMember.action?id=' + this.data.account,
+        url: app.globalData.url +'getMember.action?id=' + app.globalData.sno,
         // data: JSON.stringify({ id: this.data.account }),
         method: 'POST',
         header: {
@@ -75,7 +75,7 @@ Page({
     }
     if (app.globalData.type==4){//管理员登录
       wx.request({
-        url: 'https://www.iwchuang.cn/ichuang/getAdmin.action',
+        url: app.globalData.url +'ichuang/getAdmin.action',
         data: JSON.stringify({ id: this.data.account }),
         method: 'POST',
         header: {
